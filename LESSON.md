@@ -1,45 +1,56 @@
-# Lesson 09 — Sensors and State
+# Lesson 10 — Autonomous I: Park Every Time
 
-Without sensors your robot drives blindfolded, counting seconds. Encoders
-and the IMU take the blindfold off — Arc 3 starts here.
+A 40-point auto that works 30% of the time loses to a 25-point park that
+works 95% — by match three. Points × how often it actually works is the
+number that matters.
 
-## What changed
+## The code
 
-`opmodes/TeamTeleOp.java` gains a **SENSORS** dashboard zone: encoder ticks
-converted to inches, and IMU heading in degrees. Drive the sim and watch
-what the robot *actually did*, next to what you commanded.
+`opmodes/ParkAuto.java` — your first complete autonomous, built the
+competitive way:
 
-## The counts-per-inch worksheet (do this for YOUR robot)
+- **A state machine, not a script**: `DRIVE_TO_ZONE → STOP → DONE`. Each
+  state = what am I doing; each transition = what makes me stop.
+- **Three exit doors on every motion**: goal reached, timeout expired,
+  `opModeIsActive()`. The second protects motors; the third is the rules of
+  the sport.
+- **Encoders, not sleeps**: distance from lesson 09's counts-per-inch, so
+  battery voltage doesn't change where you land.
+- **Telemetry narrates the state** — you can watch the machine think.
 
+## The reusable skeleton
+
+Every auto you ever write is this shape:
+
+```java
+enum State { FIRST_THING, SECOND_THING, DONE }
+State state = State.FIRST_THING;
+ElapsedTime stateTimer = new ElapsedTime();
+
+while (opModeIsActive() && state != State.DONE) {
+    switch (state) {
+        case FIRST_THING:
+            if (goalReached || stateTimer.seconds() > TIMEOUT) {
+                state = State.SECOND_THING;
+                stateTimer.reset();
+            } else {
+                // command the motion
+            }
+            break;
+        // ...
+    }
+    telemetry.update();
+}
 ```
-counts_per_inch = (encoder ticks per motor rev × gear ratio)
-                  ─────────────────────────────────────────
-                        (wheel diameter × π)
-```
 
-Example: REV HD Hex 20:1 → 560 ticks/rev, direct drive (1:1), 75mm (2.95in)
-wheels → 560 / (2.95 × 3.1416) ≈ **60.4 counts per inch**.
+## The 5/5 drill
 
-Sanity check: push the robot exactly 24 inches by hand along a tape
-measure. The dashboard should read ~24.0. If it reads 12 or 48, a term in
-your formula is wrong (usually the gear ratio).
-
-The constant lives at the top of `TeamTeleOp.java` (`COUNTS_PER_INCH`).
-The sim/mock default is 100.0 — a real robot's number will differ.
-
-## The 4 sensor gotchas
-
-1. **Encoders measure wheel spin, not robot position** — wheels slip.
-   Cross-check with the IMU when it matters.
-2. **Reset encoders in init** or ticks carry over between runs — the
-   classic "my auto went insane on the second run" bug.
-3. **IMU heading**: −180 to 180, positive = counterclockwise. Mounting
-   orientation can flip it — verify with the dashboard before trusting it.
-4. **Counts-per-inch is per-robot.** Gear ratios change mid-season; re-check
-   after drivetrain changes.
+Run it five times in a row in the simulator. 5/5 parks or it isn't done —
+one run is an anecdote. (On a real field, re-run the drill on carpet:
+battery and wheel slip vote too. Generous timeouts and margins absorb it.)
 
 ## Next
 
-- **Previous:** `lesson-08-telemetry`
-- **Next:** `lesson-10-autonomous-park` — free points, every match.
+- **Previous:** `lesson-09-sensors`
+- **Next:** `lesson-11-p-control` — precision, with one multiplication.
 - **Series index:** [`LESSONS.md`](../../blob/master/LESSONS.md)

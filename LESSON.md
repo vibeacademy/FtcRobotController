@@ -1,39 +1,36 @@
-# Lesson 02 — The Robotics Workstation
+# Lesson 03 — Your First OpMode
 
-Goal: build this repo on your own computer and see **BUILD SUCCESSFUL** —
-no robot required. This page is the checklist from the video.
+You write a program from an empty file: menu registration, the init/loop
+lifecycle, live telemetry, and gamepad input. Still no robot required.
 
-## Setup checklist
+## Challenge first (really)
 
-1. **Install Android Studio** — https://developer.android.com/studio
-   (the free official version; 8GB+ RAM recommended).
-2. **Clone this repo** (or your fork of it):
-   ```
-   git clone https://github.com/vibeacademy/FtcRobotController.git
-   ```
-3. **Open it in Android Studio** (File → Open → the repo folder) and wait
-   out the first Gradle sync. Honest numbers: 3–10 minutes the first time.
-   It's downloading the build tools once; later syncs take seconds.
-4. **Find your folder.** Everything your team writes lives in
-   `TeamCode/src/main/java/org/firstinspires/ftc/teamcode/`. The other ~95%
-   of the repo is the FTC SDK — you get to ignore it.
-5. **Build**: Build → Make Project (or `./gradlew :TeamCode:assembleDebug`
-   in the terminal). You want the green **BUILD SUCCESSFUL**.
+Before opening my file: create
+`TeamCode/src/main/java/org/firstinspires/ftc/teamcode/opmodes/` →
+`MyFirstOpMode.java` and type it yourself from the video. Typos and red
+squiggles are the actual learning. Then compare with:
 
-## The 3 errors everyone hits
+```
+TeamCode/src/main/java/org/firstinspires/ftc/teamcode/opmodes/MyFirstOpMode.java
+```
 
-| Error | Fix |
-|---|---|
-| `SDK location not found` | Android Studio usually creates `local.properties` for you. If building from the terminal, create it with one line: `sdk.dir=/path/to/your/Android/sdk` (on Mac usually `~/Library/Android/sdk`). Never commit this file — it's machine-specific. |
-| Gradle sync hangs forever | Check antivirus/VPN isn't scanning the download; plug into real WiFi; let it finish once — it's cached after that. |
-| `Unsupported Java` / JDK errors | Use the JDK bundled with Android Studio (Settings → Build Tools → Gradle → Gradle JDK → the "jbr" entry). |
+(The comments in that file match the video's beats.)
 
-Stuck on something else? Post the **first** error message in your build
-output under the video — not the last one. The first error is the real one;
-the rest are dominoes.
+## The 4 mistakes everyone makes
+
+1. Forgetting `telemetry.update()` — dashboard stays blank forever.
+2. Expecting code *below* the loop to run during the match — it doesn't.
+3. Stick up = **negative** value (aviation convention).
+4. Heavy work above `waitForStart()` — keep init fast and light.
+
+## Prove it worked
+
+Run it (simulator comes next lesson — for now, Build → Make Project must go
+green, and if you have any gamepad, the sim in Lesson 04 will show your
+stick values live). Your win: a program with your name on the menu.
 
 ## Next
 
-- **Previous:** `lesson-01-hello-robot` — what an OpMode is.
-- **Next:** `lesson-03-first-opmode` — you write your first program.
+- **Previous:** `lesson-02-workstation`
+- **Next:** `lesson-04-simulator` — drive a robot that doesn't exist.
 - **Series index:** [`LESSONS.md`](../../blob/master/LESSONS.md)

@@ -19,8 +19,13 @@ import org.firstinspires.ftc.teamcode.hardware.RobotHardware.RobotConfig;
  * When the robot "does something weird", read the zones top to bottom.
  * The bug lives at the first zone whose numbers surprise you.
  */
-@TeleOp(name = "Team TeleOp (Lesson 08)", group = "Lessons")
+@TeleOp(name = "Team TeleOp (Lesson 09)", group = "Lessons")
 public class TeamTeleOp extends LinearOpMode {
+
+    // Lesson 09: ticks -> inches. THIS NUMBER IS PER-ROBOT (wheel size,
+    // gear ratio, encoder type). Compute yours with the LESSON.md worksheet;
+    // never copy it from a tutorial. 100.0 is the mock/sim default.
+    private static final double COUNTS_PER_INCH = 100.0;
 
     @Override
     public void runOpMode() {
@@ -77,6 +82,17 @@ public class TeamTeleOp extends LinearOpMode {
             }
             if (robot.claw != null) {
                 telemetry.addData("Claw", robot.claw.isOpen() ? "OPEN" : "CLOSED");
+            }
+
+            // Lesson 09: sensors are the robot's own report of what
+            // actually happened — commands are wishes, sensors are truth.
+            telemetry.addLine("— SENSORS —");
+            int leftTicks = robot.drivetrain.getLeftEncoderPosition();
+            int rightTicks = robot.drivetrain.getRightEncoderPosition();
+            telemetry.addData("Distance (in)", "L %.1f  R %.1f",
+                    leftTicks / COUNTS_PER_INCH, rightTicks / COUNTS_PER_INCH);
+            if (robot.imu != null) {
+                telemetry.addData("Heading (deg)", "%.1f", robot.imu.getHeading());
             }
             telemetry.update();
         }

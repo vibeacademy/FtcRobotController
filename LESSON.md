@@ -1,45 +1,45 @@
-# Lesson 08 — Telemetry: See What the Robot Thinks
+# Lesson 09 — Sensors and State
 
-You can't pause a robot mid-bug. Telemetry is the instrument panel that
-makes the inside visible while it runs.
+Without sensors your robot drives blindfolded, counting seconds. Encoders
+and the IMU take the blindfold off — Arc 3 starts here.
 
-## The dashboard
+## What changed
 
-`opmodes/TeamTeleOp.java` now has a three-zone dashboard mirroring the
-control loop:
+`opmodes/TeamTeleOp.java` gains a **SENSORS** dashboard zone: encoder ticks
+converted to inches, and IMU heading in degrees. Drive the sim and watch
+what the robot *actually did*, next to what you commanded.
+
+## The counts-per-inch worksheet (do this for YOUR robot)
 
 ```
-— INPUTS —      what the drivers command
-— DECISIONS —   what our math computed
-— OUTPUTS —     what the hardware was told / reports back
+counts_per_inch = (encoder ticks per motor rev × gear ratio)
+                  ─────────────────────────────────────────
+                        (wheel diameter × π)
 ```
 
-Habits worth stealing: units in the labels ("ticks"), stable row order, one
-screen max.
+Example: REV HD Hex 20:1 → 560 ticks/rev, direct drive (1:1), 75mm (2.95in)
+wheels → 560 / (2.95 × 3.1416) ≈ **60.4 counts per inch**.
 
-## The 4-question ritual (printable)
+Sanity check: push the robot exactly 24 inches by hand along a tape
+measure. The dashboard should read ~24.0. If it reads 12 or 48, a term in
+your formula is wrong (usually the gear ratio).
 
-When the robot "does something weird", read the dashboard top to bottom:
+The constant lives at the top of `TeamTeleOp.java` (`COUNTS_PER_INCH`).
+The sim/mock default is 100.0 — a real robot's number will differ.
 
-| # | Question | If the numbers are wrong here… |
-|---|----------|-------------------------------|
-| 1 | What do the INPUTS say? | controller / driver problem |
-| 2 | What do the DECISIONS say? | **your math** — the code |
-| 3 | Do OUTPUTS match decisions? | config / hardware map |
-| 4 | Does physics match outputs? | build team's problem |
+## The 4 sensor gotchas
 
-**The bug lives at the first zone whose numbers surprise you.**
-
-## The challenge
-
-Run `opmodes/DebugChallengeOpMode.java` in the simulator. It has exactly one
-planted bug and a full dashboard. Diagnose it with the four questions ONLY —
-don't read the mixing lines until you've named the zone. (The answer is
-marked in the source for checking yourself afterward.)
+1. **Encoders measure wheel spin, not robot position** — wheels slip.
+   Cross-check with the IMU when it matters.
+2. **Reset encoders in init** or ticks carry over between runs — the
+   classic "my auto went insane on the second run" bug.
+3. **IMU heading**: −180 to 180, positive = counterclockwise. Mounting
+   orientation can flip it — verify with the dashboard before trusting it.
+4. **Counts-per-inch is per-robot.** Gear ratios change mid-season; re-check
+   after drivetrain changes.
 
 ## Next
 
-- **Previous:** `lesson-07-testing`
-- **Next:** `lesson-09-sensors` — encoders, the IMU, and taking the
-  blindfold off. Arc 3 begins.
+- **Previous:** `lesson-08-telemetry`
+- **Next:** `lesson-10-autonomous-park` — free points, every match.
 - **Series index:** [`LESSONS.md`](../../blob/master/LESSONS.md)

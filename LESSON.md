@@ -38,6 +38,15 @@ No battery sag, no wheel slip, perfect sensors. The simulator proves your
 **logic**; only the field proves **physics**. Both matter; the sim is where
 you get to be wrong cheaply.
 
+## The #1 setup error
+
+`java: package javafx.scene does not exist` when building the simulator
+means your JDK doesn't include JavaFX. The fix: use a **"Full"** JDK —
+BellSoft Liberica JDK 17 **Full** (the standard Liberica looks almost
+identical but has no JavaFX). In IntelliJ: File → Project Structure →
+SDKs → + → pick/download the Full variant, then set it as the Project SDK
+and rebuild.
+
 ## Known SDK ↔ simulator deltas
 
 - Not every SDK class exists in the sim; stick to motors/servos/IMU/gamepad

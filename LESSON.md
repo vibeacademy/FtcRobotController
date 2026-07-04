@@ -1,44 +1,45 @@
-# Lesson 04 — Drive a Robot That Doesn't Exist
+# Lesson 05 — Mecanum Math
 
-Arc 1 payoff: drive a simulated robot with a real gamepad, using code from
-this repo. Robot time is scarce; sim time is unlimited.
+Two sticks in, four wheel powers out — and the one-line mistake that flips
+robots. The code: `opmodes/SimTeleOp.java` (upgraded from lesson 04's tank
+drive; the mixing table is in its header comment).
 
-## Setup
+## The mixing table
 
-1. **Get the simulator** (community project — credit where due):
-   ```
-   git clone https://github.com/Beta8397/virtual_robot.git
-   ```
-   Open it in IntelliJ IDEA (free Community edition) and run it once.
-2. **Sync this repo's TeamCode into it:**
-   ```
-   cp -r TeamCode/src/main/java/org/firstinspires/ftc/teamcode/* \
-       <virtual_robot>/TeamCode/src/org/firstinspires/ftc/teamcode/
-   ```
-3. Run the simulator, pick **Sim TeleOp (Lesson 04)** from its menu (same
-   menu idea as the Driver Station), plug in a gamepad, drive.
+|            | DRIVE | STRAFE | TURN |
+|------------|-------|--------|------|
+| frontLeft  | +     | +      | +    |
+| frontRight | +     | −      | −    |
+| backLeft   | +     | −      | +    |
+| backRight  | +     | +      | −    |
 
-## The code
+Signs depend on how YOUR motors are mounted. Trust the one-wheel test (spin
+each wheel alone, check its direction), not a table from the internet —
+including this one.
 
-`opmodes/SimTeleOp.java` — two-stick tank drive. Read the comments: the
-hardware names (`front_left_motor`, …) are the contract that makes the same
-code work in the sim and on a real robot.
+## Why the normalize step matters
 
-## Honest print: where the sim lies
+Push all three intents at once and a wheel can be asked for 2.4 power.
+Motors max at 1.0 and the SDK clips **each wheel separately** — destroying
+the ratios that made your motion straight. Normalizing scales all four
+together. Delete the normalize block in the sim and feel the difference.
 
-No battery sag, no wheel slip, perfect sensors. The simulator proves your
-**logic**; only the field proves **physics**. Both matter; the sim is where
-you get to be wrong cheaply.
+## Challenges
 
-## Known SDK ↔ simulator deltas
+1. **Slow-mode button (~20 min):** while holding right bumper, multiply all
+   four powers by 0.35. Your future drivers will love you.
+2. **Field-centric teaser (hard):** rotate the (drive, strafe) vector by the
+   robot's heading so "up on the stick" always means "away from the driver."
+   You'll want lesson 09's IMU first.
 
-- Not every SDK class exists in the sim; stick to motors/servos/IMU/gamepad
-  for these lessons.
-- If an OpMode compiles here but not in the sim, delete the sim copy and
-  re-sync — stale files are the usual cause.
+## Debugging quickies
+
+- Robot spins instead of strafing → one motor's direction is reversed.
+- Robot creeps when sticks are released → add a small deadzone (ignore
+  |stick| < 0.05).
 
 ## Next
 
-- **Previous:** `lesson-03-first-opmode`
-- **Next:** `lesson-05-mecanum` — the math that makes it strafe.
+- **Previous:** `lesson-04-simulator`
+- **Next:** `lesson-06-hardware-abstraction` — stop talking to motors directly.
 - **Series index:** [`LESSONS.md`](../../blob/master/LESSONS.md)

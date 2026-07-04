@@ -5,53 +5,75 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 /**
- * Lesson 04 — Drive a Robot That Doesn't Exist.
+ * Lesson 05 — Mecanum Math.
  *
- * Two-stick tank drive, written for the virtual_robot simulator. The
- * hardware names below are the simulator's standard names — the same names
- * a real robot's configuration would use. That's the whole trick: the code
- * asks for motors by name, and whoever answers (simulator or metal), the
- * code can't tell.
+ * Full mecanum drive: two sticks in, four wheel powers out. Each wheel gets
+ * a recipe, not a command:
  *
- * Note: this file talks to motors directly on purpose — it's the "before"
- * picture. Lesson 06 shows why competitive teams don't leave it this way.
+ *              | DRIVE | STRAFE | TURN |
+ *   frontLeft  |   +   |   +    |  +   |
+ *   frontRight |   +   |   -    |  -   |
+ *   backLeft   |   +   |   -    |  +   |
+ *   backRight  |   +   |   +    |  -   |
+ *
+ * The normalization step at the bottom is the safety lesson: without it,
+ * combined inputs push powers past 1.0, the SDK clips each wheel
+ * differently, the ratios between wheels get destroyed, and the robot
+ * lurches off course.
+ *
+ * (Still talking to motors directly on purpose — lesson 06 fixes that.)
  */
-@TeleOp(name = "Sim TeleOp (Lesson 04)", group = "Lessons")
+@TeleOp(name = "Sim TeleOp (Lesson 05 - Mecanum)", group = "Lessons")
 public class SimTeleOp extends LinearOpMode {
 
     @Override
     public void runOpMode() {
 
-        // Ask for each motor by name. One typo here = crash on init —
-        // on a real robot too. (Lesson 12 shows where these names live.)
         DcMotor frontLeft = hardwareMap.get(DcMotor.class, "front_left_motor");
         DcMotor frontRight = hardwareMap.get(DcMotor.class, "front_right_motor");
         DcMotor backLeft = hardwareMap.get(DcMotor.class, "back_left_motor");
         DcMotor backRight = hardwareMap.get(DcMotor.class, "back_right_motor");
 
-        // Left-side motors are mounted mirrored, so reverse them —
-        // otherwise "forward" spins the robot in place.
         frontLeft.setDirection(DcMotor.Direction.REVERSE);
         backLeft.setDirection(DcMotor.Direction.REVERSE);
 
-        telemetry.addData("Status", "Initialized — tank drive, two sticks");
+        telemetry.addData("Status", "Initialized — mecanum drive");
         telemetry.update();
 
         waitForStart();
 
         while (opModeIsActive()) {
-            // Stick up reads negative (lesson 03), so negate to make
-            // up = forward.
-            double leftPower = -gamepad1.left_stick_y;
-            double rightPower = -gamepad1.right_stick_y;
+            // Three intents from two sticks.
+            double drive = -gamepad1.left_stick_y;   // forward/backward
+            double strafe = gamepad1.left_stick_x;   // slide left/right
+            double turn = gamepad1.right_stick_x;    // rotate
 
-            frontLeft.setPower(leftPower);
-            backLeft.setPower(leftPower);
-            frontRight.setPower(rightPower);
-            backRight.setPower(rightPower);
+            // The mixing lines — each wheel's recipe from the table above.
+            double fl = drive + strafe + turn;
+            double fr = drive - strafe - turn;
+            double bl = drive - strafe + turn;
+            double br = drive + strafe - turn;
 
-            telemetry.addData("Left power", "%.2f", leftPower);
-            telemetry.addData("Right power", "%.2f", rightPower);
+            // Normalize: if any wheel wants more than 1.0, scale ALL four
+            // down by the same factor. This preserves the ratios between
+            // wheels — which is what keeps the motion straight.
+            double max = Math.max(
+                    Math.max(Math.abs(fl), Math.abs(fr)),
+                    Math.max(Math.abs(bl), Math.abs(br)));
+            if (max > 1.0) {
+                fl /= max;
+                fr /= max;
+                bl /= max;
+                br /= max;
+            }
+
+            frontLeft.setPower(fl);
+            frontRight.setPower(fr);
+            backLeft.setPower(bl);
+            backRight.setPower(br);
+
+            telemetry.addData("Intents", "d %.2f  s %.2f  t %.2f", drive, strafe, turn);
+            telemetry.addData("Wheels", "fl %.2f  fr %.2f  bl %.2f  br %.2f", fl, fr, bl, br);
             telemetry.update();
         }
     }

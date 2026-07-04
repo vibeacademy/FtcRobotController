@@ -21,6 +21,12 @@
   names: `front_left_motor` etc.). `LESSON.md` documents the simulator
   install, the sync command from the repo's CLAUDE.md, and the SDK/simulator
   API deltas the team has hit.
+- **Simulator dependency (pinned):** all learner-facing links clone
+  `vibeacademy/virtual_robot` — our frozen fork (pinned at `6a65ea57e90b`),
+  not upstream `Beta8397/virtual_robot` — so published videos never break
+  when upstream changes. Credit Beta8397 on camera and in descriptions.
+  Upgrading the pin = re-verify lessons 04/05/08 in the sim, then push to
+  the fork.
 
 ## Starter Script
 
@@ -55,7 +61,8 @@ real one. Not similar. The same.
 
 ## The Stack (0:35–1:30)
 
-Beats: virtual_robot (community FTC simulator — credit the project), our
+Beats: virtual_robot (community FTC simulator by Beta8397 — credit them on
+camera; learners clone OUR pinned fork so the lesson never breaks), our
 TeamCode from lessons 1–3, one sync command that copies team code into the
 sim. That's the whole stack.
 

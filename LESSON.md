@@ -1,44 +1,44 @@
-# Lesson 06 — The Hardware Abstraction Layer
+# Lesson 07 — Prove It Without a Robot
 
-One file, three worlds: real robot, simulator, plain-laptop tests. The trick
-is programming to *interfaces* — promises about motors — instead of motors.
+18 experiments on competition robot code, a few seconds, zero hardware.
+The mock layer from lesson 06 is the lab bench; JUnit runs the experiments.
 
-## The before/after (the diff IS the lesson)
-
-- **Before:** `opmodes/SimTeleOp.java` — talks to motors directly
-  (`hardwareMap.get(DcMotor.class, ...)` in every OpMode). This is the
-  pattern in most rookie tutorials.
-- **After:** `opmodes/TeamTeleOp.java` — talks to `robot.drivetrain`
-  through the repo's abstraction layer. Open both side by side.
-
-## The three folders
+## Run the suite
 
 ```
-hardware/
-├── interfaces/   the socket shapes  (IDrivetrain, IArm, IClaw, IIMU, ...)
-├── real/         FTC-SDK-backed implementations (real motors answer)
-└── mock/         pretend hardware that keeps score (tests use these)
+./gradlew :TeamCode:testDebugUnitTest
 ```
 
-Anything that "plugs into" `IDrivetrain` can `mecanumDrive(drive, strafe,
-turn)`. Your OpMode doesn't know or care who answered.
+Test classes live in `TeamCode/src/test/java/.../hardware/mock/`:
 
-## Why this matters (beyond tidiness)
+- `DrivetrainTest` (8) — including `mecanumDriveClampsWheelPowers`, the test
+  that catches the robot-flipping bug from lesson 05
+- `ArmTest` (5), `ClawTest` (4)
+- `ImuTest` (1) — the test written on camera this lesson
 
-- The mecanum math from lesson 05 moved inside the drivetrain — write it
-  once, every OpMode gets it.
-- Hardware names live in ONE place (the config), not scattered.
-- Four coders can work in parallel with zero robots — mock hardware answers.
-- Lesson 07 cashes the biggest check: automated tests against the mocks.
+## Break it on purpose (do this — it's the point)
 
-## Rules that come with it (this repo enforces them)
+1. Open `hardware/mock/MockDrivetrain.java`, find the `clip(...)` method.
+2. Make it return its input unchanged.
+3. Re-run the suite. Exactly one test goes red:
+   `mecanumDriveClampsWheelPowers` — the lesson-05 flip bug, caught by a
+   laptop.
+4. Restore `clip`, re-run, green. That red→green cycle is the whole
+   discipline.
 
-- OpModes never call `hardwareMap.get(...)` directly.
-- Optional hardware always gets a null check (`robot.arm != null`).
-- Don't over-abstract: interfaces for hardware, not for everything.
+## Rules of good robot tests
+
+- Test YOUR decisions (mixing math, clamps, presets) — not the SDK.
+- Deterministic only: no sleeps, no randomness. A flaky test is worse than
+  no test.
+- Tests prove **logic**. A passing suite plus a dead battery is still a dead
+  robot — the field proves physics (lessons 09–12).
+
+When an FTC judge asks "how do you know your code works?", running this
+suite in front of them beats "we tried it once" — by a lot.
 
 ## Next
 
-- **Previous:** `lesson-05-mecanum`
-- **Next:** `lesson-07-testing` — prove it works with no robot at all.
+- **Previous:** `lesson-06-hardware-abstraction`
+- **Next:** `lesson-08-telemetry` — see what the robot thinks.
 - **Series index:** [`LESSONS.md`](../../blob/master/LESSONS.md)

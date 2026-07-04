@@ -22,9 +22,10 @@
   install, the sync command from the repo's CLAUDE.md, and the SDK/simulator
   API deltas the team has hit.
 - **Simulator dependency (pinned):** all learner-facing links clone
-  `vibeacademy/virtual_robot` — our frozen fork (pinned at `6a65ea57e90b`),
-  not upstream `Beta8397/virtual_robot` — so published videos never break
-  when upstream changes. Credit Beta8397 on camera and in descriptions.
+  `vibeacademy/virtual_robot` — our fork (pinned at `13a8bc80f501` =
+  upstream `6a65ea57e90b` + three FTC-SDK-parity shims), not upstream
+  `Beta8397/virtual_robot` — so published videos never break when upstream
+  changes. Credit Beta8397 on camera and in descriptions (Apache-2.0).
   Upgrading the pin = re-verify lessons 04/05/08 in the sim, then push to
   the fork.
 

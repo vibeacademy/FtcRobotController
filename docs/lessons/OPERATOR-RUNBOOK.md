@@ -23,12 +23,21 @@ In order:
    tidy first. The lesson *branches* are already live regardless — but the
    `LESSONS.md` index only lands on master when #22 merges, and every
    branch LESSON.md links to it. ~10 min.
-2. **[YOU] Verify simulator compatibility once.** Run the sync command
-   against virtual_robot and drive `SimTeleOp` (lesson 04/05 code) and
+2. **[YOU] Verify simulator compatibility once.** Clone the pinned fork
+   (`vibeacademy/virtual_robot`, frozen at `6a65ea57e90b`), run the sync
+   command against it, and drive `SimTeleOp` (lesson 04/05 code) and
    `DebugChallengeOpMode` (lesson 08). This is the one thing never verified
    — if the sim's API rejects something, the fix must happen BEFORE those
    scripts are finalized, because scripts describe the code. ~45 min.
    [AGENT] can fix any deltas found.
+
+   *Fork policy:* learners always clone the fork, never upstream — published
+   videos can't rot. To upgrade the sim later: fetch upstream into the fork
+   on a branch, re-run this verification, then (and only then) fast-forward
+   the fork's master and update the pin SHA here and in lesson-04's
+   LESSON.md. The fork stays byte-identical to some upstream commit — we
+   don't modify it (upstream has no license file; a plain GitHub fork is
+   within GitHub's ToS, modifications would be murkier).
 3. **[YOU] Recording setup, once:** screen-capture tool (OBS is fine), a
    decent mic, a gamepad, and one test recording of you driving the sim
    while narrating. This test clip is your edit-workflow shakedown — do it

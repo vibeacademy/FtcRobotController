@@ -1,56 +1,43 @@
-# Lesson 10 — Autonomous I: Park Every Time
+# Lesson 11 — Autonomous II: Move With Precision
 
-A 40-point auto that works 30% of the time loses to a 25-point park that
-works 95% — by match three. Points × how often it actually works is the
-number that matters.
+Robots don't stop — they decelerate. One multiplication makes the approach
+slow itself: **power = kP × error**.
 
 ## The code
 
-`opmodes/ParkAuto.java` — your first complete autonomous, built the
-competitive way:
+- `autonomous/PBaseAuto.java` — the P-control helpers (`driveInchesP`,
+  `turnToHeadingP`), plus the clamp from lesson 05, a minimum-power floor
+  (friction eats tiny powers), the three exit doors from lesson 10, and
+  angle wraparound for headings.
+- `opmodes/PrecisionAuto.java` — lesson 10's park, upgraded: drives 24
+  inches with P-control, then squares up to heading 0.
+- `opmodes/TuneKpOpMode.java` — live tuning: dpad adjusts kP, A runs a
+  24-inch move, B resets encoders.
 
-- **A state machine, not a script**: `DRIVE_TO_ZONE → STOP → DONE`. Each
-  state = what am I doing; each transition = what makes me stop.
-- **Three exit doors on every motion**: goal reached, timeout expired,
-  `opModeIsActive()`. The second protects motors; the third is the rules of
-  the sport.
-- **Encoders, not sleeps**: distance from lesson 09's counts-per-inch, so
-  battery voltage doesn't change where you land.
-- **Telemetry narrates the state** — you can watch the machine think.
+## The symptom table (memorize it)
 
-## The reusable skeleton
+| Symptom | Diagnosis |
+|---|---|
+| Robot overshoots, reverses, overshoots — oscillates | kP too **high** |
+| Robot crawls and stalls short of the target | kP too **low** |
+| Settles fast, no overshoot | just right — write it down |
 
-Every auto you ever write is this shape:
+## Tuning drill
 
-```java
-enum State { FIRST_THING, SECOND_THING, DONE }
-State state = State.FIRST_THING;
-ElapsedTime stateTimer = new ElapsedTime();
+1. Run `Tune kP` in the simulator, start at 0.02.
+2. Drop it to 0.005 — watch the crawl.
+3. Crank it to 0.08 — watch the oscillation.
+4. Bisect until it settles clean. That's YOUR kP — it changes when the
+   robot gains weight, so keep the constant in one place and re-tune.
 
-while (opModeIsActive() && state != State.DONE) {
-    switch (state) {
-        case FIRST_THING:
-            if (goalReached || stateTimer.seconds() > TIMEOUT) {
-                state = State.SECOND_THING;
-                stateTimer.reset();
-            } else {
-                // command the motion
-            }
-            break;
-        // ...
-    }
-    telemetry.update();
-}
-```
+## What you now know
 
-## The 5/5 drill
-
-Run it five times in a row in the simulator. 5/5 parks or it isn't done —
-one run is an anecdote. (On a real field, re-run the drill on carpet:
-battery and wheel slip vote too. Generous timeouts and margins absorb it.)
+This is real control theory — the actual entry point, not a watered-down
+version. PID's I and D terms are refinements on the exact loop you just
+tuned. Well-tuned P takes most FTC teams further than they'd believe.
 
 ## Next
 
-- **Previous:** `lesson-09-sensors`
-- **Next:** `lesson-11-p-control` — precision, with one multiplication.
+- **Previous:** `lesson-10-autonomous-park`
+- **Next:** `lesson-12-competition-ops` — the finale: real hub, match day.
 - **Series index:** [`LESSONS.md`](../../blob/master/LESSONS.md)

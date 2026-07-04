@@ -1,45 +1,44 @@
-# Lesson 05 — Mecanum Math
+# Lesson 06 — The Hardware Abstraction Layer
 
-Two sticks in, four wheel powers out — and the one-line mistake that flips
-robots. The code: `opmodes/SimTeleOp.java` (upgraded from lesson 04's tank
-drive; the mixing table is in its header comment).
+One file, three worlds: real robot, simulator, plain-laptop tests. The trick
+is programming to *interfaces* — promises about motors — instead of motors.
 
-## The mixing table
+## The before/after (the diff IS the lesson)
 
-|            | DRIVE | STRAFE | TURN |
-|------------|-------|--------|------|
-| frontLeft  | +     | +      | +    |
-| frontRight | +     | −      | −    |
-| backLeft   | +     | −      | +    |
-| backRight  | +     | +      | −    |
+- **Before:** `opmodes/SimTeleOp.java` — talks to motors directly
+  (`hardwareMap.get(DcMotor.class, ...)` in every OpMode). This is the
+  pattern in most rookie tutorials.
+- **After:** `opmodes/TeamTeleOp.java` — talks to `robot.drivetrain`
+  through the repo's abstraction layer. Open both side by side.
 
-Signs depend on how YOUR motors are mounted. Trust the one-wheel test (spin
-each wheel alone, check its direction), not a table from the internet —
-including this one.
+## The three folders
 
-## Why the normalize step matters
+```
+hardware/
+├── interfaces/   the socket shapes  (IDrivetrain, IArm, IClaw, IIMU, ...)
+├── real/         FTC-SDK-backed implementations (real motors answer)
+└── mock/         pretend hardware that keeps score (tests use these)
+```
 
-Push all three intents at once and a wheel can be asked for 2.4 power.
-Motors max at 1.0 and the SDK clips **each wheel separately** — destroying
-the ratios that made your motion straight. Normalizing scales all four
-together. Delete the normalize block in the sim and feel the difference.
+Anything that "plugs into" `IDrivetrain` can `mecanumDrive(drive, strafe,
+turn)`. Your OpMode doesn't know or care who answered.
 
-## Challenges
+## Why this matters (beyond tidiness)
 
-1. **Slow-mode button (~20 min):** while holding right bumper, multiply all
-   four powers by 0.35. Your future drivers will love you.
-2. **Field-centric teaser (hard):** rotate the (drive, strafe) vector by the
-   robot's heading so "up on the stick" always means "away from the driver."
-   You'll want lesson 09's IMU first.
+- The mecanum math from lesson 05 moved inside the drivetrain — write it
+  once, every OpMode gets it.
+- Hardware names live in ONE place (the config), not scattered.
+- Four coders can work in parallel with zero robots — mock hardware answers.
+- Lesson 07 cashes the biggest check: automated tests against the mocks.
 
-## Debugging quickies
+## Rules that come with it (this repo enforces them)
 
-- Robot spins instead of strafing → one motor's direction is reversed.
-- Robot creeps when sticks are released → add a small deadzone (ignore
-  |stick| < 0.05).
+- OpModes never call `hardwareMap.get(...)` directly.
+- Optional hardware always gets a null check (`robot.arm != null`).
+- Don't over-abstract: interfaces for hardware, not for everything.
 
 ## Next
 
-- **Previous:** `lesson-04-simulator`
-- **Next:** `lesson-06-hardware-abstraction` — stop talking to motors directly.
+- **Previous:** `lesson-05-mecanum`
+- **Next:** `lesson-07-testing` — prove it works with no robot at all.
 - **Series index:** [`LESSONS.md`](../../blob/master/LESSONS.md)

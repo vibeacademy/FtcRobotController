@@ -7,28 +7,24 @@ import org.firstinspires.ftc.teamcode.hardware.RobotHardware;
 import org.firstinspires.ftc.teamcode.hardware.RobotHardware.RobotConfig;
 
 /**
- * Lesson 06 — The Hardware Abstraction Layer ("after").
+ * Lesson 08 — TeamTeleOp with a structured telemetry dashboard.
  *
- * Same robot behavior as SimTeleOp (the "before" file, kept side by side on
- * purpose — diff them). The differences:
+ * The dashboard is an instrument panel, not a diary. Three zones, always in
+ * the same order, mirroring the control loop:
  *
- * - The OpMode never touches a motor. It talks to robot.drivetrain — an
- *   interface (a socket shape). Real motors, simulator motors, or mock
- *   motors can answer; this file can't tell and doesn't care.
- * - The mecanum mixing math from lesson 05 now lives INSIDE the drivetrain
- *   implementation. OpModes express intent; subsystems own math.
- * - Hardware names live in ONE place: the config. Fix a typo once.
- * - Optional hardware gets a null check — the arm exists on Tuesdays, when
- *   the build team hasn't borrowed the motor.
+ *   INPUTS    — what the drivers are commanding
+ *   DECISIONS — what our math computed from it
+ *   OUTPUTS   — what the hardware was told / reports back
+ *
+ * When the robot "does something weird", read the zones top to bottom.
+ * The bug lives at the first zone whose numbers surprise you.
  */
-@TeleOp(name = "Team TeleOp (Lesson 06)", group = "Lessons")
+@TeleOp(name = "Team TeleOp (Lesson 08)", group = "Lessons")
 public class TeamTeleOp extends LinearOpMode {
 
     @Override
     public void runOpMode() {
 
-        // The config is the single source of truth for what the robot has
-        // and what everything is called.
         RobotConfig config = RobotConfig.mecanumDrive(
                 "front_left_motor", "front_right_motor",
                 "back_left_motor", "back_right_motor")
@@ -48,12 +44,12 @@ public class TeamTeleOp extends LinearOpMode {
             double strafe = gamepad1.left_stick_x;
             double turn = gamepad1.right_stick_x;
 
-            // One line. The mixing table and the normalize step are inside.
             robot.drivetrain.mecanumDrive(drive, strafe, turn);
 
-            // Optional hardware: null check, always.
+            double armPower = 0.0;
             if (robot.arm != null) {
-                robot.arm.setPower(-gamepad2.left_stick_y * 0.5);
+                armPower = -gamepad2.left_stick_y * 0.5;
+                robot.arm.setPower(armPower);
             }
             if (robot.claw != null) {
                 if (gamepad2.a) {
@@ -63,7 +59,25 @@ public class TeamTeleOp extends LinearOpMode {
                 }
             }
 
-            telemetry.addData("Intents", "d %.2f  s %.2f  t %.2f", drive, strafe, turn);
+            // ---------- THE DASHBOARD ----------
+            telemetry.addLine("— INPUTS —");
+            telemetry.addData("Sticks", "d %.2f  s %.2f  t %.2f", drive, strafe, turn);
+            telemetry.addData("Gamepad2", "armY %.2f  A:%b B:%b",
+                    -gamepad2.left_stick_y, gamepad2.a, gamepad2.b);
+
+            telemetry.addLine("— DECISIONS —");
+            telemetry.addData("Arm power (cmd)", "%.2f", armPower);
+
+            telemetry.addLine("— OUTPUTS —");
+            telemetry.addData("Encoders (ticks)", "L %d  R %d",
+                    robot.drivetrain.getLeftEncoderPosition(),
+                    robot.drivetrain.getRightEncoderPosition());
+            if (robot.arm != null) {
+                telemetry.addData("Arm pos (ticks)", robot.arm.getCurrentPosition());
+            }
+            if (robot.claw != null) {
+                telemetry.addData("Claw", robot.claw.isOpen() ? "OPEN" : "CLOSED");
+            }
             telemetry.update();
         }
 

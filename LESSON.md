@@ -1,44 +1,45 @@
-# Lesson 07 — Prove It Without a Robot
+# Lesson 08 — Telemetry: See What the Robot Thinks
 
-18 experiments on competition robot code, a few seconds, zero hardware.
-The mock layer from lesson 06 is the lab bench; JUnit runs the experiments.
+You can't pause a robot mid-bug. Telemetry is the instrument panel that
+makes the inside visible while it runs.
 
-## Run the suite
+## The dashboard
+
+`opmodes/TeamTeleOp.java` now has a three-zone dashboard mirroring the
+control loop:
 
 ```
-./gradlew :TeamCode:testDebugUnitTest
+— INPUTS —      what the drivers command
+— DECISIONS —   what our math computed
+— OUTPUTS —     what the hardware was told / reports back
 ```
 
-Test classes live in `TeamCode/src/test/java/.../hardware/mock/`:
+Habits worth stealing: units in the labels ("ticks"), stable row order, one
+screen max.
 
-- `DrivetrainTest` (8) — including `mecanumDriveClampsWheelPowers`, the test
-  that catches the robot-flipping bug from lesson 05
-- `ArmTest` (5), `ClawTest` (4)
-- `ImuTest` (1) — the test written on camera this lesson
+## The 4-question ritual (printable)
 
-## Break it on purpose (do this — it's the point)
+When the robot "does something weird", read the dashboard top to bottom:
 
-1. Open `hardware/mock/MockDrivetrain.java`, find the `clip(...)` method.
-2. Make it return its input unchanged.
-3. Re-run the suite. Exactly one test goes red:
-   `mecanumDriveClampsWheelPowers` — the lesson-05 flip bug, caught by a
-   laptop.
-4. Restore `clip`, re-run, green. That red→green cycle is the whole
-   discipline.
+| # | Question | If the numbers are wrong here… |
+|---|----------|-------------------------------|
+| 1 | What do the INPUTS say? | controller / driver problem |
+| 2 | What do the DECISIONS say? | **your math** — the code |
+| 3 | Do OUTPUTS match decisions? | config / hardware map |
+| 4 | Does physics match outputs? | build team's problem |
 
-## Rules of good robot tests
+**The bug lives at the first zone whose numbers surprise you.**
 
-- Test YOUR decisions (mixing math, clamps, presets) — not the SDK.
-- Deterministic only: no sleeps, no randomness. A flaky test is worse than
-  no test.
-- Tests prove **logic**. A passing suite plus a dead battery is still a dead
-  robot — the field proves physics (lessons 09–12).
+## The challenge
 
-When an FTC judge asks "how do you know your code works?", running this
-suite in front of them beats "we tried it once" — by a lot.
+Run `opmodes/DebugChallengeOpMode.java` in the simulator. It has exactly one
+planted bug and a full dashboard. Diagnose it with the four questions ONLY —
+don't read the mixing lines until you've named the zone. (The answer is
+marked in the source for checking yourself afterward.)
 
 ## Next
 
-- **Previous:** `lesson-06-hardware-abstraction`
-- **Next:** `lesson-08-telemetry` — see what the robot thinks.
+- **Previous:** `lesson-07-testing`
+- **Next:** `lesson-09-sensors` — encoders, the IMU, and taking the
+  blindfold off. Arc 3 begins.
 - **Series index:** [`LESSONS.md`](../../blob/master/LESSONS.md)

@@ -11,9 +11,11 @@ this repo. Robot time is scarce; sim time is unlimited.
    ```
    git clone https://github.com/vibeacademy/virtual_robot.git
    ```
-   (virtual_robot is a community project by Beta8397 — all credit to them;
-   the original lives at https://github.com/Beta8397/virtual_robot. Our
-   copy is pinned at commit `6a65ea57e90b`.)
+   (virtual_robot is a community project by Beta8397 (Apache-2.0) — all
+   credit to them; the original lives at
+   https://github.com/Beta8397/virtual_robot. Our copy is pinned at
+   `13a8bc80f501`: upstream plus three tiny FTC-SDK-parity shims so all
+   the code in this series compiles in the sim unmodified.)
 
    Open it in IntelliJ IDEA (free Community edition) and run it once.
 2. **Sync this repo's TeamCode into it:**

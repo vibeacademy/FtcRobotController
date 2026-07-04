@@ -1,36 +1,44 @@
-# Lesson 03 — Your First OpMode
+# Lesson 04 — Drive a Robot That Doesn't Exist
 
-You write a program from an empty file: menu registration, the init/loop
-lifecycle, live telemetry, and gamepad input. Still no robot required.
+Arc 1 payoff: drive a simulated robot with a real gamepad, using code from
+this repo. Robot time is scarce; sim time is unlimited.
 
-## Challenge first (really)
+## Setup
 
-Before opening my file: create
-`TeamCode/src/main/java/org/firstinspires/ftc/teamcode/opmodes/` →
-`MyFirstOpMode.java` and type it yourself from the video. Typos and red
-squiggles are the actual learning. Then compare with:
+1. **Get the simulator** (community project — credit where due):
+   ```
+   git clone https://github.com/Beta8397/virtual_robot.git
+   ```
+   Open it in IntelliJ IDEA (free Community edition) and run it once.
+2. **Sync this repo's TeamCode into it:**
+   ```
+   cp -r TeamCode/src/main/java/org/firstinspires/ftc/teamcode/* \
+       <virtual_robot>/TeamCode/src/org/firstinspires/ftc/teamcode/
+   ```
+3. Run the simulator, pick **Sim TeleOp (Lesson 04)** from its menu (same
+   menu idea as the Driver Station), plug in a gamepad, drive.
 
-```
-TeamCode/src/main/java/org/firstinspires/ftc/teamcode/opmodes/MyFirstOpMode.java
-```
+## The code
 
-(The comments in that file match the video's beats.)
+`opmodes/SimTeleOp.java` — two-stick tank drive. Read the comments: the
+hardware names (`front_left_motor`, …) are the contract that makes the same
+code work in the sim and on a real robot.
 
-## The 4 mistakes everyone makes
+## Honest print: where the sim lies
 
-1. Forgetting `telemetry.update()` — dashboard stays blank forever.
-2. Expecting code *below* the loop to run during the match — it doesn't.
-3. Stick up = **negative** value (aviation convention).
-4. Heavy work above `waitForStart()` — keep init fast and light.
+No battery sag, no wheel slip, perfect sensors. The simulator proves your
+**logic**; only the field proves **physics**. Both matter; the sim is where
+you get to be wrong cheaply.
 
-## Prove it worked
+## Known SDK ↔ simulator deltas
 
-Run it (simulator comes next lesson — for now, Build → Make Project must go
-green, and if you have any gamepad, the sim in Lesson 04 will show your
-stick values live). Your win: a program with your name on the menu.
+- Not every SDK class exists in the sim; stick to motors/servos/IMU/gamepad
+  for these lessons.
+- If an OpMode compiles here but not in the sim, delete the sim copy and
+  re-sync — stale files are the usual cause.
 
 ## Next
 
-- **Previous:** `lesson-02-workstation`
-- **Next:** `lesson-04-simulator` — drive a robot that doesn't exist.
+- **Previous:** `lesson-03-first-opmode`
+- **Next:** `lesson-05-mecanum` — the math that makes it strafe.
 - **Series index:** [`LESSONS.md`](../../blob/master/LESSONS.md)

@@ -11,8 +11,8 @@
   thesis lesson: software = match points.
 - **Objectives:** (1) structure an autonomous as a state machine (not a
   script of sleeps); (2) guard every motion with the three-condition while
-  loop (target ∨ timeout ∨ opModeIsActive); (3) articulate expected-value
-  thinking: 25 points × 90% beats 40 points × 30%.
+  loop (target ∨ timeout ∨ opModeIsActive); (3) explain why points × how
+  often it actually works is the number that matters: 25 × 90% beats 40 × 30%.
 
 ## Branch Spec
 
@@ -40,7 +40,7 @@ Lessons 01–09 (encoders are load-bearing here).
 ## Hook (0:00–0:45)
 
 [Visual: Scoreboard math on screen — Team A "40-pt auto, works 30%" vs Team
-B "25-pt park, works 95%" — expected value counters tick up across 5
+B "25-pt park, works 95%" — running point totals tick up across 5
 simulated matches; B pulls ahead by match 3.]
 [Video Prompt: Dark scoreboard interface two team columns, five match icons
 fill in sequence, left column occasionally scores 40 with red X marks on
@@ -73,7 +73,8 @@ ABORT stop-sign icon labeled timeout, clean whiteboard teaching aesthetic]
 ## The Three Exit Doors (4:00–6:00)
 
 [Paradigm Shift]
-(Audio) Here's the line every reviewer of FTC code looks for first. In a
+(Audio) Here's the line an experienced FTC mentor checks first in any
+team's code. In a
 game loop, `while (notThereYet)` is fine — worst case, a sprite jitters. On
 a robot, that same loop with a stalled wheel is a motor burning at full
 power against a wall while thirty seconds of match tick away — and it will
@@ -136,7 +137,7 @@ write.
 A 40-point auto that works 30% of the time loses to a 25-point park that
 works 95% — by match three. Build your first complete autonomous the
 competitive way: a state machine (not a script of sleeps), the
-three-exit-door while loop that reviewers look for first, and the 5/5
+three-exit-door while loop that experienced mentors check first, and the 5/5
 reliability drill. Software = points, starting now.
 
 📦 CODE FOR THIS LESSON (ParkAuto + reusable state-machine skeleton)

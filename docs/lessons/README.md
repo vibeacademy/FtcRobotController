@@ -24,9 +24,25 @@ Every lesson attacks at least one of these four pains:
 | P3 | "We can't code without the robot / hub" | Simulator, mocks, and unit tests are the *spine* of the series, not an appendix |
 | P4 | "Software feels like risk, not advantage" | Every arc ends by connecting the code to match points |
 
-**Audience:** FTC-age learners (roughly 12–18) and their mentors/parents.
-Assume zero robotics knowledge. Assume at most scratch-level to hobby-level
-coding. Never condescend — they're smart, they just haven't seen this domain.
+**Audience — the persona every script is written for:**
+
+A 12–18-year-old boy who's into STEM and plans to study it in college. He
+games (and has maybe modded or scripted one), had some Scratch or Python at
+school, and either just joined a robotics team or is deciding whether to.
+He's YouTube-native: he gives a video 30 seconds to earn the next minute.
+
+- **He wants:** to be genuinely useful to his team fast; to be "the software
+  person" (identity and status, not just a task); to win matches; and —
+  quietly — something real for the college application: FTC judges interview
+  *students*, and an engineering portfolio beats "took a coding class."
+- **He fears:** being the kid who breaks the robot; math gatekeeping ("you
+  need calculus for robotics"); and being talked down to.
+- **He is NOT:** a professional developer. He has never deployed a website,
+  used a debugger at work, or sat in a code review. Zero workplace metaphors
+  land. Games, phones, school, sports, and science fairs land.
+
+Never condescend — he's smart, he just hasn't seen this domain. Every
+technical term gets defined in-sentence the first time it appears.
 
 **Authority goal:** the channel becomes the answer to "how do we actually do
 FTC software?" — the thing a mentor links to a new student on day one.
@@ -149,14 +165,34 @@ Fits the existing GembaFlow board:
 
 ## Voice Calibration (delta from the channel style guide)
 
-The scriptwriter skill targets staff engineers; this series targets teens and
-their mentors. Keep: hook-first structure, no hype, visuals-over-code-reading,
-paradigm-shift bridges, respect for the viewer's time. Change:
+The scriptwriter skill targets staff engineers; this series targets the
+persona above. Keep from the skill: hook-first structure, no hype,
+visuals-over-code-reading, paradigm-shift bridges, respect for the viewer's
+time. Change:
 
-- Bridge FROM game/website intuitions (not React/backend): "in a game loop
-  you own the world; on a robot, physics owns it and your code just votes."
-- Shorter runtime target: **8–12 min** (attention + school schedules).
+- **Bridge FROM his world, never from a workplace.** Paradigm shifts anchor
+  in games ("in a game loop you own the world; on a robot, physics owns it
+  and your code just votes"), phones, sports, bikes, and school — never in
+  REST APIs, web deploys, breakpoints-at-work, or "production."
+- **Banned vocabulary → teen swap table** (scripts must use the right column):
+
+  | Never say | Say instead |
+  |---|---|
+  | "in production" | "at a real match" |
+  | "deploys are cheap, roll back" | "your phone updates games overnight" |
+  | "breakpoints / console logs" | "pausing a game / reading a crash report" |
+  | "observability" | "making the robot show its work" |
+  | "expected value" | "points × how often it actually works" |
+  | "an annuity / ROI" | "points every single match" |
+  | "a deliverable" | "a skill / a job you own" |
+  | "code review / reviewers" | "a teammate checking your work" (or FTC judges) |
+
+- **The college/portfolio motivator is real — use it, sparingly.** One beat
+  per arc, max: FTC judges interview students; this workflow is the story a
+  college essay wants; "you didn't take a course, you shipped a robot."
+- Shorter runtime target: **8–12 min** (attention + school schedules), hooks
+  under 40 seconds.
 - Concrete physical stakes beat abstractions: "this bug flips your robot,"
   not "this violates an invariant."
 - Celebrate the win at the end of every lesson — each one ends with something
-  the learner can *show someone*.
+  the learner can *show someone* (a teammate, a mentor, a parent).

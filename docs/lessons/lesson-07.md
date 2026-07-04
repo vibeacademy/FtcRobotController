@@ -95,8 +95,9 @@ annotated teaching code style]
 Beats: comment out the clamp in MockDrivetrain's clip(); rerun; ONE test
 goes red — `mecanumDriveClampsWheelPowers`, exactly the flip bug; restore;
 green. Say the quiet part: this exact break-and-catch was performed on this
-repo's real PR to prove the suite bites — that's what "tests as evidence"
-means to reviewers.
+repo for real, to prove the suite bites — and when an FTC judge asks your
+team "how do you know your code works?", THIS is the answer that wins
+awards, not "we tried it once."
 
 [Visual: Side-by-side terminal runs — 17/17 green, then 16/17 with one red
 line naming the clamp test, then green again]

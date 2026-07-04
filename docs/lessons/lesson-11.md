@@ -38,8 +38,9 @@ Lessons 09–10. Say plainly: no calculus, one multiplication.
 ## Hook (0:00–0:40)
 
 [Visual: Two sim robots drive to a line. Robot A at full power slams past it,
-backs up, overshoots again — oscillating. Robot B glides in like a subway
-stopping, easing off as it arrives. Error number counts to zero beside B.]
+backs up, overshoots again — oscillating. Robot B glides in like a driver
+easing up to a stop sign, slowing as it arrives. Error counts to zero
+beside B.]
 [Video Prompt: Top-down dark simulator, left robot approaches glowing target
 line at full speed overshoots reverses overshoots again in decaying
 oscillation with red trail, right robot approaches fast then smoothly
@@ -138,7 +139,7 @@ working when it counts.
 Full power, then stop — except robots don't stop, momentum exists, and your
 auto oscillates past the target forever. Learn proportional control: one
 multiplication (power = kP × error) that makes robots glide onto targets
-like a subway stopping. Implement it for distance and heading, then tune kP
+like a driver easing up to a stop sign. Implement it for distance and heading, then tune kP
 live and learn the two failure symptoms by heart.
 
 📦 CODE FOR THIS LESSON (P-helpers + live tuning OpMode + symptom table)

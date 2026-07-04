@@ -31,7 +31,8 @@ Lessons 01–03. ~30 min.
 1. The simulator isn't a toy or a cheat — pro robotics teams (and NASA)
    simulate first. Sim time is real practice time.
 2. Code doesn't know it's in a simulator. If your OpMode only touches the
-   standard hardware interface, reality is a deploy target.
+   standard hardware interface, the real robot is just one more place the
+   same code runs.
 3. Practice ratio flips: teams fight for robot time; sim time is unlimited.
    The software team can now out-practice everyone.
 

@@ -60,7 +60,7 @@ stuff nobody documents. Twelve lessons in, this is graduation.
 ## Deploy: Code Meets Metal (0:45–4:30)
 
 Beats: what deploy actually is (Gradle builds an APK, installs onto the hub
-— the "deploy target" promise from lesson 02, kept); USB first-time, WiFi
+— the "robot shows up last" promise from lesson 02, kept); USB first-time, WiFi
 after; then THE moment — the hardware configuration map on the Driver
 Station: every name your code asks for (`front_left_motor`…) gets bound to
 a physical port; one typo = the crash from lesson 04, now with wires; the
@@ -78,8 +78,9 @@ teaching collage style]
 ## Old vs. New (4:30–5:30)
 
 [Paradigm Shift]
-(Audio) Web developers deploy fifty times a day — deploys are cheap, roll
-back in seconds. A robot deploy is expensive: battery, field access, a
+(Audio) When a game on your phone breaks, the studio ships a fix overnight
+and by lunch nobody remembers. A robot deploy is expensive: battery, field
+access, a
 teammate's time, and if it's match day, there's no rollback — the match
 happens with whatever's on the hub. So the discipline inverts: everything
 that CAN be verified before deploying — logic, math, state machines —
@@ -111,8 +112,8 @@ printable): battery voltage, right OpModes visible on DS menu, config map
 matches robot, encoder reset verified via telemetry, gamepads in the right
 ports; **between matches**: read telemetry from the last match BEFORE
 touching anything — data first, wrenches second; **the software person's
-match-day job**: run checklist, read numbers, protect the freeze — calm is
-a deliverable.
+match-day job**: run checklist, read numbers, protect the freeze — staying
+calm is a skill, and your whole team can feel it.
 
 [Visual: The printable checklist, checkmarks landing one by one; a red
 "CODE FREEZE" banner with a date and a padlock over the repo]
@@ -126,7 +127,10 @@ Beats: recap the arc as capability, not topics — "you can build a dev
 environment, drive a simulated robot, architect for swappable hardware,
 prove logic with tests, debug via telemetry, ship a reliable auto, and run
 match-day software ops. That's not 'the coding kid.' That's a robotics
-software engineer, junior edition"; where next: PID's I and D, odometry,
+software engineer, junior edition"; the college beat (one per arc — this is
+Arc 3's): "FTC judges interview students, and college essays want a story —
+'I took a coding class' is neither. 'I shipped the software on a
+competition robot' is both"; where next: PID's I and D, odometry,
 vision, and season-specific strategy (future videos); the recruitment CTA —
 "the best thing you can do with this series is watch it WITH a teammate;
 software teams of one are the fragility we started with" (P1, closed).

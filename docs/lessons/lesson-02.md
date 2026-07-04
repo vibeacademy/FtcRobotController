@@ -28,8 +28,9 @@ Lesson 01. A computer (Win/Mac/Linux, 8GB+ RAM).
 ### Mental Model Shifts
 1. You're not installing "a robotics app" — you're assembling a toolchain:
    editor → build system → SDK, each with one job.
-2. The robot is a *deploy target*, like a website's server. You can build and
-   test all week without it, then deploy on practice day.
+2. The robot is where your code ships at the end — like a console you put a
+   finished game on. You build and test all week on your laptop; the robot
+   only has to show up on practice day.
 3. Big scary codebase ≠ your code. 95% of the repo is the SDK; your team lives
    in one folder: TeamCode.
 

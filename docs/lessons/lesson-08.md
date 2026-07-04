@@ -70,12 +70,12 @@ small circular loop diagram watermark behind, clean instrument panel style]
 ## Old vs. New (3:00–4:00)
 
 [Paradigm Shift]
-(Audio) Web and game debugging spoils you: breakpoints freeze the world,
-console logs scroll forever, replays exist. A robot is a physical process —
-you cannot pause gravity mid-lurch and inspect a variable. Your instinct is
-to stop the program and look inside. The robot way is the opposite: keep it
-running and make the inside visible from outside. Observability isn't an
-ops buzzword here — it's the only debugger you get on a field.
+(Audio) When a game glitches, you're spoiled: pause it, watch the replay,
+read the crash report. A robot is a physical process — you cannot pause
+gravity mid-lurch and go poke at a variable. Your instinct is to stop the
+program and look inside. The robot way is the opposite: keep it running and
+make the inside visible from the outside. Making the robot show its work
+isn't extra credit — it's the only debugger you get on a field.
 
 ## Implementation (4:00–7:30)
 
@@ -113,8 +113,8 @@ teaching style]
 (Audio) Arc two complete — and look at what that actually is: you write
 OpModes against clean interfaces, prove the logic with tests before the
 robot exists, and when reality misbehaves anyway, your robot tells you
-where. That's not student-grade process; most adult software teams would
-take it. The branch has the buggy OpMode — diagnose it with the four
+where. That's not a kid version of engineering — it's the real thing, the
+same workflow you'll recognize in college labs and internships later. The branch has the buggy OpMode — diagnose it with the four
 questions before peeking. Arc three is where this pays in points: sensors,
 autonomous, and the software that wins matches.
 
@@ -140,7 +140,7 @@ https://github.com/vibeacademy/FtcRobotController/tree/lesson-08-telemetry
 📚 CHAPTERS
 0:00 The robot that pulls left
 0:40 Dashboards, not diaries
-3:00 Why breakpoints don't work on physics
+3:00 Why you can't pause a robot mid-bug
 4:00 Building the 3-zone dashboard
 7:30 The 4-question ritual, live
 9:00 Arc 2 complete: your full workflow

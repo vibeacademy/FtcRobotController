@@ -108,8 +108,8 @@ developer tooling aesthetic]
 
 ## Why Software Wins (7:30–8:30)
 
-Beats: three concrete claims with numbers — (1) autonomous is a pure-software
-25+ points/match annuity; (2) driver-assist code (field-centric drive, preset
+Beats: three concrete claims with numbers — (1) autonomous is 25+ points
+scored by software alone, every single match; (2) driver-assist code (field-centric drive, preset
 arm positions) turns an average driver into a good one; (3) reliability code
 (clamps, timeouts) is why the same robot scores in round 6, not just round 1.
 Software is the only subsystem that improves without adding a single gram.

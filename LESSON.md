@@ -1,43 +1,49 @@
-# Lesson 11 — Autonomous II: Move With Precision
+# Lesson 12 — Competition Ops (Series Finale) 🎓
 
-Robots don't stop — they decelerate. One multiplication makes the approach
-slow itself: **power = kP × error**.
+The robot finally shows up — last, on purpose. Everything before this was
+secretly building toward being the calm pit.
 
-## The code
+## The "ship it" configuration
 
-- `autonomous/PBaseAuto.java` — the P-control helpers (`driveInchesP`,
-  `turnToHeadingP`), plus the clamp from lesson 05, a minimum-power floor
-  (friction eats tiny powers), the three exit doors from lesson 10, and
-  angle wraparound for headings.
-- `opmodes/PrecisionAuto.java` — lesson 10's park, upgraded: drives 24
-  inches with P-control, then squares up to heading 0.
-- `opmodes/TuneKpOpMode.java` — live tuning: dpad adjusts kP, A runs a
-  24-inch move, B resets encoders.
+- `opmodes/CompetitionTeleOp.java` — the arc 2 TeleOp plus slow mode
+  (lesson 05's challenge, now standard equipment)
+- `opmodes/CompetitionAuto.java` — the precision park, pinned. Season
+  scoring gets added as new states AFTER this is 5/5 on carpet — never
+  instead of it.
+- `docs/PIT-CHECKLIST.md` — **print this.** The pre-match software ritual.
 
-## The symptom table (memorize it)
+## Deploy in three sentences
 
-| Symptom | Diagnosis |
-|---|---|
-| Robot overshoots, reverses, overshoots — oscillates | kP too **high** |
-| Robot crawls and stalls short of the target | kP too **low** |
-| Settles fast, no overshoot | just right — write it down |
+Gradle builds your code into an app and installs it on the Control Hub
+(USB first time, WiFi after). The **hardware configuration map** on the
+Driver Station binds every name your code asks for (`front_left_motor`, …)
+to a physical port — one screen, one source of truth, and the reason your
+code never changed between the sim and the field. One renamed motor =
+crash on init: config is the contract; guard it.
 
-## Tuning drill
+## What changes on real carpet
 
-1. Run `Tune kP` in the simulator, start at 0.02.
-2. Drop it to 0.005 — watch the crawl.
-3. Crank it to 0.08 — watch the oscillation.
-4. Bisect until it settles clean. That's YOUR kP — it changes when the
-   robot gains weight, so keep the constant in one place and re-tune.
+Battery sag (your kP feels different at 12.1V vs 13.8V), wheel slip, loose
+connectors — the #1 "software bug" at competitions is a wire. Your tools
+transfer: the 4-question telemetry ritual (lesson 08) is your multimeter,
+and question 4 finally earns its keep. Re-run the 5/5 drill on carpet.
 
-## What you now know
+## Graduation
 
-This is real control theory — the actual entry point, not a watered-down
-version. PID's I and D terms are refinements on the exact loop you just
-tuned. Well-tuned P takes most FTC teams further than they'd believe.
+You can now: build a dev environment, drive a simulated robot, structure
+code against swappable hardware, prove logic with tests, debug through
+telemetry, ship a reliable autonomous, and run match-day software ops.
 
-## Next
+That's not "the coding kid." That's a robotics software engineer, junior
+edition — and it's a story both FTC judges (who interview students) and
+college applications actually want: *you didn't take a coding class, you
+shipped the software on a competition robot.*
 
-- **Previous:** `lesson-10-autonomous-park`
-- **Next:** `lesson-12-competition-ops` — the finale: real hub, match day.
-- **Series index:** [`LESSONS.md`](../../blob/master/LESSONS.md)
+## Walk the series in code
+
+Every lesson's branch stays up. Diff any two consecutive branches to see
+exactly what a lesson added:
+[`LESSONS.md`](../../blob/master/LESSONS.md) — the full index.
+
+Bring a teammate through it. Software teams of one are how this story
+started.

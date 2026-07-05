@@ -6,8 +6,11 @@
 the walkthrough matches that branch's `HelloWorld.java` exactly.
 
 **Production key:** `[Visual: …]` + `[Prompt: …]` = generated still.
-`[Video Prompt: …]` = generated motion clip (2 max — both used here).
-`[Screen: …]` = you record it (IDE/browser capture, no generation).
+`[Video Prompt: …]` = generated motion clip. `[Screen: …]` = you record it
+(IDE/browser capture, no generation). `[Edit: …]` = composite you build in
+the editor over real captures. `[Asset: …]` = the finished file — all
+finals live in `production/ep01/` **on the `lesson-01-hello-robot` branch**
+(see its `ASSETS.md` for the full cue map).
 
 ---
 
@@ -29,10 +32,16 @@ None. This is the front door of the series.
 [Visual: Two FTC robots side by side at a match start. Left robot sits dead
 during autonomous. Right robot drives off, scores, parks. Scoreboard ticks up
 only on the right.]
-[Prompt: Split screen dark arena, two hexagonal competition robots on game
-field, left robot dim and motionless with red X overlay, right robot with
-glowing blue motion trail scoring into goal, scoreboard showing 0 vs 25,
-dramatic stadium lighting, tech aesthetic, 16:9]
+[Prompt: Split screen photo inside a school gymnasium robotics competition,
+two small cube-shaped student competition robots built from silver aluminum
+extrusion rails with four mecanum wheels and visible colorful wiring,
+sitting on light gray foam mat field tiles, left robot motionless and
+desaturated with a large red X overlay, right robot identical but driving
+forward with a glowing blue motion trail, a digital scoreboard above each
+robot showing "0" on the left and "25" on the right, documentary sports
+photography, dramatic gym lighting, 16:9, not humanoid, no legs, no sci-fi
+armor]
+[Asset: production/ep01/E01-01-hook-dead-vs-scoring.png]
 
 (Audio) These two robots cost the same. They weigh the same. They were built
 by teams the same age as you. And one of them just scored twenty-five points
@@ -49,12 +58,15 @@ it. Let's go.
 
 ## What FTC Is, in 90 Seconds (0:40–2:10)
 
-[Visual: Match timeline bar — 30s AUTO glowing (100% software), 2min TELEOP
-(software-assisted), 30s ENDGAME — with point icons above each phase]
-[Prompt: Horizontal timeline bar on dark background, three segments labeled
-AUTO TELEOP ENDGAME, first segment glowing bright blue with robot icon and
-"pure software" label, point counter icons floating above each segment, clean
-infographic style]
+[Visual: Match timeline bar — AUTO 0:30 glowing (100% software), TELEOP
+2:00, ENDGAME 0:30 — robot icon above the AUTO segment]
+[Prompt: Minimal flat infographic on a plain dark background, one single
+horizontal bar divided into exactly three segments in one row, first
+segment glowing bright blue labeled "AUTO 0:30", second segment neutral
+gray labeled "TELEOP 2:00", third segment warm amber labeled "ENDGAME
+0:30", one small white robot icon above the first segment only, absolutely
+no other text numbers icons or decorations, clean flat vector style]
+[Asset: production/ep01/E01-02-match-timeline.png]
 
 (Audio) Quick version, for anyone brand new. FTC — FIRST Tech Challenge — is
 a robotics league where teams of students build and program a robot to play
@@ -75,6 +87,7 @@ price tag reading "$0"]
 [Prompt: Three icons in a row on dark background, wrench icon and battery
 icon in muted gray, code brackets icon glowing bright blue with a zero
 dollar price tag attached, minimal infographic style]
+[Asset: production/ep01/E01-03-zero-dollar-advantage.png]
 
 (Audio) Now here's the thing I noticed competing in this league, and it's
 the reason this series exists. Almost every team has builders. Almost no
@@ -101,10 +114,16 @@ again. Fifty times a second, until the match ends.
 
 [Visual: Animated loop — gamepad icon → "decide" brain node → motor icons →
 back to gamepad, cycling continuously with a 20ms timer]
-[Video Prompt: Dark background circular flow diagram, glowing pulse travels
-from gamepad icon to brain/chip node to four motor icons and back
-continuously, small 20ms timer counting each cycle, smooth loop animation,
-tech aesthetic]
+[Video Prompt: Dark background circular flow diagram with three fixed
+nodes arranged in a ring — a gamepad icon at the left, a brain/chip node at
+the top, four motor icons grouped at the right — a single glowing blue
+pulse travels clockwise: from the gamepad, then to the chip, then to the
+motors, then back to the gamepad, repeating continuously in the same
+direction, small 20ms timer counting up each full cycle, smooth seamless
+loop animation, tech aesthetic]
+[Asset: production/ep01/E01-04-control-loop.mp4 — PENDING: v1 clip lost
+with the old machine; regenerate (~$0.15) with this prompt, review the
+flow direction in motion before accepting]
 
 (Audio) Which means your code doesn't really DO things. Your code gets
 asked a question, over and over: "what should the motors do RIGHT NOW?" And
@@ -124,6 +143,7 @@ physics force arrows and "PHYSICS VOTES" label]
 jumping with clean green trajectory arc labeled engine guarantees it, right
 side realistic robot wheel on gray foam tile with red slip arrows and
 friction symbols labeled physics votes, contrast illustration style]
+[Asset: production/ep01/E01-05-engine-vs-physics.png]
 
 (Audio) That's mental model number one, and honestly, half of robot
 programming is just respecting it. The loop asks, you answer, physics
@@ -164,11 +184,14 @@ program gets ON that menu. A program is called an OpMode in FTC — literally
 "operation mode" — and a team ships dozens of them. This annotation is your
 program's name tag.
 
-[Visual: Overlay diagram — the @TeleOp code line with an arrow to a phone
-mockup showing a menu list where "Hello World Op Mode" is highlighted]
-[Prompt: Dark code editor line with annotation text, orange arrow pointing
-to smartphone driver station mockup with program menu list, one entry
-highlighted glowing, annotated teaching diagram style]
+[Visual: Overlay diagram — the @TeleOp code line with an arrow to the real
+Driver Station menu where "Hello World Op Mode" is highlighted]
+[Screen: two captures — close-up of the @TeleOp line in the IDE, and the
+Driver Station OpMode menu (sim or phone) showing "Hello World Op Mode"]
+[Edit: composite the two captures side by side, draw an orange arrow from
+the annotation line to the highlighted menu entry. DO NOT generate this —
+models invent fake code and garble UI text (VISUAL-PROMPT-STRATEGY Rule 3).
+Export the finished composite as production/ep01/E01-06-teleop-menu-overlay.png]
 
 [Screen: waitForStart() line, highlighted, with the code above it tinted
 blue and the code below tinted green]
@@ -199,10 +222,13 @@ for real in later lessons.
 [Visual: HelloWorld.java shrunk to fit one screen with three regions
 color-boxed — INIT (blue), THE LOOP (green), TELEMETRY (yellow) — loop
 diagram inset in corner]
-[Prompt: Dark IDE code editor screenshot style, Java file with three colored
-translucent overlay boxes labeled INIT, THE LOOP, TELEMETRY in blue green
-yellow, small circular loop diagram inset bottom right matching colors,
-developer tooling aesthetic]
+[Screen: real IDE capture of HelloWorld.java zoomed out so the whole file
+fits one screen]
+[Edit: draw three translucent color boxes over the real capture — INIT
+(blue), THE LOOP (green), TELEMETRY (yellow) — inset the loop diagram
+bottom-right in matching colors. DO NOT generate this — models invent fake
+Java (VISUAL-PROMPT-STRATEGY Rule 3). Export the finished composite as
+production/ep01/E01-07-file-map-overlay.png]
 
 (Audio) Step back and look at what just happened. A name tag for the menu.
 A line where the match starts. A loop that answers "what now?" fifty times
@@ -217,9 +243,13 @@ shape. You just read real robot code.
 [Visual: Scoreboard-style graphic with three stacked claims — "AUTO: 25+
 pts, software alone" / "DRIVER ASSIST: average driver → good driver" /
 "RELIABILITY: scores in round 6, not just round 1" — each with a point icon]
-[Prompt: Dark sports scoreboard aesthetic, three stacked stat rows with
-glowing blue point icons, bold condensed typography, broadcast graphics
-style]
+[Prompt: Flat dark sports-broadcast lower-third graphic, exactly three
+stacked horizontal stat bars with bold condensed white text, first bar
+glowing blue reading "AUTO: 25+ PTS, SOFTWARE ALONE", second bar reading
+"DRIVER ASSIST: AVERAGE BECOMES GOOD", third bar reading "RELIABILITY:
+SCORES IN ROUND 6", a small glowing point icon at the left of each bar,
+absolutely no other text or numbers, clean broadcast graphics style, 16:9]
+[Asset: production/ep01/E01-08-why-software-wins.png]
 
 (Audio) So why should YOU be the software person? Three concrete reasons.
 One: autonomous is twenty-five plus points, every single match, scored by
@@ -260,10 +290,15 @@ when you're ready. See you in lesson two.
 
 Split image: dead gray robot on the left, glowing robot with motion trail on
 the right; overlay text "200 LINES OF CODE" between them.
-[Prompt: YouTube thumbnail 1280x720, split composition, left half desaturated
-motionless competition robot, right half vibrant robot with blue glowing
-motion trail on game field, bold white text "200 LINES" center, high contrast
-dark background, energetic youth tech style]
+[Prompt: YouTube thumbnail 1280x720 split composition, two identical small
+cube-shaped student competition robots built from silver aluminum extrusion
+rails with four mecanum wheels and visible wiring on light gray foam tile
+field, left half desaturated gray and motionless, right half vivid with
+bright blue glowing motion trail behind the robot, giant bold white text
+with black outline "200 LINES" centered across the split, high contrast
+dark background, energetic sports poster style, not humanoid, no legs, no
+sci-fi armor]
+[Asset: production/ep01/E01-09-thumbnail.png]
 
 ---
 
@@ -274,7 +309,14 @@ dark background, energetic youth tech style]
 2. HelloWorld.java: license block scroll-past; @TeleOp line; waitForStart
    line; the while loop (separate close-up takes, cursor highlighting)
 3. Browser: branch page hovering LESSON.md (for the homework beat)
+4. Driver Station OpMode menu (sim or phone) showing "Hello World Op Mode"
+   — feeds the E01-06 overlay composite
+5. HelloWorld.java zoomed out, whole file on one screen — feeds the E01-07
+   overlay composite
 
-Generated assets: 6 stills + 2 video clips (prompts inline above).
+**Assets:** all finals in `production/ep01/` on the `lesson-01-hello-robot`
+branch — see its `ASSETS.md` for the cue map. 5 generated stills +
+thumbnail are ✅ committed; 1 video clip (E01-04) pending regeneration; 2
+edit-time composites (E01-06/07) built from shots 2/4/5 above.
 Metadata, tags, description, and pinned comment: see the media packet in
 `docs/lessons/lesson-01.md` — chapters match this script's section times.

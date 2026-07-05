@@ -65,8 +65,16 @@ faster, and reliably on-style.
   Iterating on video is not — get motion prompts right first try:
   explicitly state flow direction ("pulse travels clockwise: gamepad, then
   chip, then motors, then back to gamepad"), or the model muddles it.
-- Output convention: `content-marketing/videos/ftc-software-robotics-epNN/
-  assets/` (+ `assets-v2/` for revision passes), manifest.json included.
+- Output convention: generation runs in content-marketing
+  (`videos/ftc-software-robotics-epNN/assets/`, `assets-v2/` for revision
+  passes) — but that output is **workshop scratch, not the deliverable**.
+  Curated finals get promoted to `production/epNN/` on the lesson's branch
+  in FtcRobotController, named `ENN-CC-slug.ext` by script cue number,
+  with an `ASSETS.md` cue map, and the script gets back-edited to match
+  (`[Asset:]` refs, final prompt text, Rule-3 reclassifications). Full SOP:
+  `docs/lessons/OPERATOR-RUNBOOK.md`, "Asset pass SOP". A pass that leaves
+  the script and asset set out of lockstep is not finished — lesson 01
+  drifted this way and it was caught during production.
 
 ## Reclassification checklist (code-ish visuals → edit-time overlays)
 

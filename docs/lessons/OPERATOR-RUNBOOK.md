@@ -11,7 +11,12 @@ delegable to Claude/agents, you review. **[DONE]** = already exists.
 - [DONE] All 12 code branches, compiling, with learner-facing LESSON.md
 - [DONE] Media packets: title options, descriptions w/ chapters, tags,
   thumbnail prompts, pinned-comment text
-- **Not done:** everything below.
+- [DONE] Simulator verification, both halves: full codebase compiles
+  against the pinned fork (`13a8bc80f501`), and all five sim OpModes
+  (lessons 05, 08, 09, 10, 11) runtime-verified by driving them with a
+  gamepad (2026-07-04). The wrong-JDK JavaFX trap is documented in
+  lesson-04's LESSON.md.
+- **Not done:** everything below except Phase 0 item 2.
 
 ---
 
@@ -23,7 +28,7 @@ In order:
    tidy first. The lesson *branches* are already live regardless — but the
    `LESSONS.md` index only lands on master when #22 merges, and every
    branch LESSON.md links to it. ~10 min.
-2. **[YOU] Verify simulator compatibility — driving half only.** The
+2. **[DONE 2026-07-04] Verify simulator compatibility.** The
    compile half is DONE: the full lesson codebase (all OpModes + the entire
    hardware layer) compiles clean against the pinned fork
    (`vibeacademy/virtual_robot` @ `13a8bc80f501`). Three FTC SDK APIs the

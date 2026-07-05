@@ -70,8 +70,8 @@ execution order; the human-only steps are the schedule's critical path.
 | # | Deliverable | Who | Notes / time |
 |---|------------|-----|--------------|
 | 1 | **Full script** — blow out the starter script: every (Audio) block written word-for-word, section beats become sentences, visuals confirmed | [AGENT] drafts, **[YOU] voice-pass** | The draft must pass YOUR read-aloud test: if a sentence doesn't sound like you, rewrite it. This is the highest-leverage human hour in the pipeline. ~1–2 hrs total |
-| 2 | **Static visuals** — generate images from every `[Prompt:]` in the script | [AGENT] generates (content-marketing repo has `generate-images` tooling), **[YOU] curate** | Regenerate rejects before edit day, not during. ~30 min human |
-| 3 | **Video visuals** — the ≤2 `[Video Prompt:]` clips per script | [AGENT] generates, **[YOU] curate** | Same as above |
+| 2 | **Static visuals** — generate images from every `[Prompt:]` in the script | [AGENT] generates (content-marketing repo has `generate-images` tooling), **[YOU] curate** | Regenerate rejects before edit day, not during. Pass isn't done until the Asset pass SOP below is complete. ~30 min human |
+| 3 | **Video visuals** — the ≤2 `[Video Prompt:]` clips per script | [AGENT] generates, **[YOU] curate** | Same as above — SOP applies |
 | 4 | **Screen recordings** — IDE typing, sim driving, terminal runs, telemetry panels | **[YOU]** | The code is already on the lesson's branch — check it out, follow the script's Implementation beats. Record MORE than you need; b-roll of the sim driving is reusable across lessons. ~1–2 hrs |
 | 5 | **Voiceover / on-camera** — record the (Audio) track | **[YOU]** | Nobody else has your voice. Batch-record 2–3 lessons per session once warmed up. ~30–60 min per lesson |
 | 6 | **Edit** — assemble VO + screen captures + generated visuals per the script's timeline | **[YOU]** (or an editor you brief with the script) | The script's `[Visual:]` cues + timestamps ARE the edit decision list. ~2–4 hrs; the biggest time sink |
@@ -82,6 +82,37 @@ execution order; the human-only steps are the schedule's critical path.
 | 11 | **Link backfill** — video URL into `LESSONS.md` (master), the branch's `LESSON.md`, and the previous lesson's "next" pointer if you're adding video links there | [AGENT] | One commit per publish; delegable entirely |
 | 12 | **Distribution** — X thread / shorts / community post per content-marketing conventions | [AGENT] drafts, **[YOU] post** | Optional per lesson; at minimum do lessons 01, 04 (arc payoff), 07, 12 |
 | 13 | **Engagement** — reply to comments, especially error-message help on 02 and challenge submissions on 05/08/10 | **[YOU]** | The packets *promise* this ("post your error, I read everything"). Budget 20 min/day the first week after each publish. This is where authority actually accrues |
+
+### Asset pass SOP (steps 2–3 aren't done until all of this is)
+
+Learned the hard way on lesson 01, where the script drifted from the
+generated set and the gap was caught during production. A generation pass
+ends with the script and the asset set in lockstep — [AGENT] work, all of
+it, in one PR pair:
+
+1. **Generate** with content-marketing's tooling (that repo keeps the venv
+   + `generate_assets.py`); iterate v1 → review → v2 per
+   `VISUAL-PROMPT-STRATEGY.md`. The raw workshop output is scratch — do
+   not treat it as the deliverable.
+2. **Promote finals into THIS repo, on the lesson's branch**, under
+   `production/epNN/`, named `ENN-CC-slug.ext` where `CC` is the visual's
+   cue number in script order. Add/update the folder's `ASSETS.md` cue
+   map. Cue numbers are reserved even for non-generated visuals, so the
+   folder reads in script order with intentional gaps.
+3. **Back-edit the script on master, same pass:** every `[Prompt:]` /
+   `[Video Prompt:]` carries the text that actually produced (or will
+   reproduce) the final, followed by an `[Asset: production/epNN/…]` line;
+   any visual reclassified during review (Rule 3 code/UI cases) is flipped
+   to `[Screen:]` + `[Edit: … export as production/epNN/ENN-CC-….png]`;
+   the shot list reflects the real capture needs.
+4. **Definition of done:** every generated cue in the script points at a
+   file that exists on the lesson branch (or is explicitly marked
+   PENDING with a reason), and `ASSETS.md` has no orphans. If the script
+   and the folder disagree, the pass is not finished.
+
+During post, export edit-time composites (and the approved video clips)
+into the same `production/epNN/` folder under their reserved cue names —
+the folder ends production complete, not just generation complete.
 
 **Rough per-lesson human time: 6–9 hours.** The agent-delegable steps
 (1-draft, 2, 3, 7, 8, 11, 12-draft) cut maybe a third of the total —

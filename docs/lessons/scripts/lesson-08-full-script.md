@@ -7,7 +7,8 @@ dashboard; `DebugChallengeOpMode` carries the planted bug (back-left strafe
 sign flipped, marked in source for post-diagnosis checking).
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
-`[Video Prompt:]` = generated motion (1 used) · `[Screen:]` = you record.
+`[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
 
 **Filming note:** the diagnosis (7:30) must be played STRAIGHT — run the
 buggy OpMode as if you don't know the answer, read the zones top to bottom,
@@ -36,10 +37,12 @@ Lessons 01–07 — the dashboard displays the lesson-05/06 pipeline.
 [Visual: A robot in sim drives in a slow circle instead of straight. Driver
 looks confused. Cut to the telemetry panel: one number is obviously wrong —
 right stick reads 0.13 with hands off the controller.]
-[Prompt: Split screen dark theme, top-down simulator robot curving off
-course with confused emoji overlay, telemetry dashboard beside it with rows
-of numbers where one row glows red showing 0.13 stick drift, detective
-magnifying glass motif, teaching aesthetic, 16:9]
+[Screen: real sim run with the drift bug in — robot curving instead of
+driving straight — and the real telemetry panel reading right stick 0.13
+with hands off the controller]
+[Edit: side-by-side composite, red glow on the guilty row, magnifying
+glass motif, confused-emoji accent. DO NOT generate — real sim + real
+telemetry or the detective story is fiction (Rule 3)]
 
 (Audio) This robot pulls left, and nobody is touching the controller. The
 build team says it's software. The software kid says it's the wheels. On
@@ -63,9 +66,11 @@ panel.
 
 [Visual: Telemetry screen mock split into three labeled zones — INPUTS /
 DECISIONS / OUTPUTS — mirroring the loop diagram from lesson 01]
-[Prompt: Phone-style telemetry dashboard dark UI, three stacked sections
-labeled INPUTS DECISIONS OUTPUTS in blue orange green with sample values,
-small circular loop diagram watermark behind, clean instrument panel style]
+[Screen: the real three-zone dashboard this episode builds, live on the
+Driver Station]
+[Edit: zone labels INPUTS / DECISIONS / OUTPUTS in blue/orange/green,
+faint loop-diagram watermark behind. DO NOT generate — the episode
+literally builds this dashboard; show the real one (Rule 3)]
 
 (Audio) And here's the design, and notice it's an old friend. Zone one,
 INPUTS: what the drivers are commanding — the sticks, the buttons. Zone
@@ -101,10 +106,11 @@ Run... there's zone one, tracking my thumbs in real time.
 
 [Visual: Code on left adding addData rows; live telemetry on right growing
 into the three-zone dashboard as each line lands]
-[Video Prompt: Split screen dark editor left and phone telemetry panel
-right, each new code line typed causes corresponding dashboard row to
-materialize with soft glow in its zone, progressive build animation,
-satisfying developer aesthetic]
+[Screen: real recording — editor left, live telemetry right; type each
+addData line, redeploy, and let the new row appear for real]
+[Edit: cut so each typed line lands with its row appearing, soft glow
+accent per new row. DO NOT generate — Rule 3, and the build-up order is
+the meaning (order-bearing motion)]
 
 [Screen: adding DECISIONS zone (arm power command), then OUTPUTS zone
 (encoder ticks, arm position, claw state with the null checks)]
@@ -144,10 +150,12 @@ even suspected the hardware.
 
 [Visual: The 4 questions as a vertical checklist; a glowing marker
 descends and stops at question 2, arrow to the flipped sign in code]
-[Prompt: Vertical checklist card dark background, four numbered questions,
-glowing scanner line descending and locking on question two with red
-highlight, arrow to code snippet with wrong minus sign circled, detective
-teaching style]
+[Screen: the buggy line in the IDE — the wrong minus sign]
+[Edit: build the four-question card as a slide with the exact questions
+from the narration; animate a scanner line locking onto question two,
+arrow to the real code capture with the minus sign circled. DO NOT
+generate — described text garbles (Rule 4) and fake code is banned
+(Rule 3)]
 
 (Audio) The full ritual, so you have it: one, inputs — wrong here means
 controller or driver. Two, decisions — wrong here means YOUR math. Three,

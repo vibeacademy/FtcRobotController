@@ -6,7 +6,8 @@
 `MyFirstOpMode.java`; you TYPE it on camera, don't paste it.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
-`[Video Prompt:]` = generated motion (≤2) · `[Screen:]` = you record it.
+`[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record it
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
 
 **Filming note:** the run demos (loop counter, stick values) happen on YOUR
 screen via the simulator — viewers don't have it until lesson 04, and the
@@ -36,10 +37,11 @@ Lessons 01–02 (the mental model + a machine that builds).
 [Visual: Empty Java file on the left; on the right, a Driver Station phone
 showing a menu with "MyFirstOpMode" in the list next to real competition
 programs.]
-[Prompt: Split screen dark background, left side empty code editor with
-blinking cursor, right side smartphone driver station UI with program list
-where MyFirstOpMode glows highlighted among other entries, achievement
-aesthetic, 16:9]
+[Screen: two captures — the empty MyFirstOpMode.java with a blinking
+cursor, and the real Driver Station OpMode list (sim DS is fine) with
+MyFirstOpMode in it]
+[Edit: split-screen composite, glow on the menu entry. DO NOT generate —
+fake DS UI garbles its own labels (Rule 3)]
 
 (Audio) Every program that has ever driven an FTC robot — every world
 championship autonomous, every teleop that hit a hundred points — started
@@ -76,10 +78,11 @@ one line is the difference between a Java file and a robot program.
 
 [Visual: The OpMode skeleton with two callouts — @TeleOp arrow to a phone
 menu entry, runOpMode arrow to a "the SDK calls this" label]
-[Prompt: Dark code editor showing short Java class skeleton, orange arrow
-from annotation line to small phone menu mockup, blue arrow from method
-name to label "the SDK calls this for you", clean annotated-code teaching
-style]
+[Screen: the real OpMode skeleton in the IDE, plus the DS menu capture
+from the earlier beat]
+[Edit: orange arrow from @TeleOp to the menu entry, blue arrow from
+runOpMode to a "the SDK calls this for you" label. DO NOT generate —
+models invent fake Java (Rule 3)]
 
 [~2 minutes 25 seconds]
 
@@ -103,10 +106,11 @@ the game."
 
 [Visual: Vertical code file split by the waitForStart line into a blue INIT
 zone ("robot must not move") and green MATCH zone ("loop runs here")]
-[Prompt: Code file diagram dark background split horizontally by glowing
-white line labeled waitForStart, upper zone tinted blue labeled INIT robot
-must not move, lower zone tinted green labeled MATCH loop runs 50x per
-second, rulebook icon in corner, clean teaching diagram style]
+[Screen: MyFirstOpMode.java zoomed out with waitForStart() centered]
+[Edit: tint above the line blue labeled "INIT — robot must not move",
+below green labeled "MATCH — loop runs 50x/sec", small rulebook icon in
+the corner. Same treatment as lesson 01's waitForStart beat — reuse that
+project file. DO NOT generate (Rule 3)]
 
 [~90 seconds]
 
@@ -154,18 +158,22 @@ bite for free.
 
 [Visual: Split — code loop on left; telemetry panel on right where stick
 value changes as an on-screen gamepad stick wiggles]
-[Video Prompt: Split screen dark UI, left side short code loop with
-highlighted telemetry line, right side telemetry dashboard where number
-updates continuously from -1.0 to 1.0 as small gamepad icon stick tilts up
-and down, synchronized smooth animation, developer tooling aesthetic]
+[Screen: real recording — the loop code on the left half, live telemetry
+on the right, while you slowly tilt the stick full up to full down; the
+number sweeping -1.0 → 1.0 IS the shot]
+[Edit: highlight the telemetry line in the code half; optional small
+gamepad overlay mirroring the stick. DO NOT generate — the stick-to-number
+sync is the teaching point and it records for real in the sim (Rule 3 +
+order-bearing motion)]
 
 [~4 minutes 30 seconds]
 
 ## The 4 Mistakes Everyone Makes (9:00–10:15)
 
 [Visual: Checklist card with four items, each with a small red-X icon]
-[Prompt: Dark checklist card, four numbered rows each with small red x
-icon and short label, clean minimal warning-card style, teaching aesthetic]
+[Edit: build the four-gotcha card as a slide — four numbered rows, red X
+icons, the exact labels from the narration. DO NOT generate — text that is
+merely described comes back garbled (Rule 4); these words must be right]
 
 (Audio) Four mistakes, so you make them on purpose once instead of by
 accident for a week. One: forgetting telemetry dot update. Your dashboard

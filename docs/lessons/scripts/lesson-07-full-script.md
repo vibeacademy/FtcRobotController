@@ -7,7 +7,8 @@
 this video. The break-it exercise targets `MockDrivetrain.clip()`.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
-`[Video Prompt:]` = generated motion (1 used) · `[Screen:]` = you record.
+`[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
 
 **Filming note:** the narrative arithmetic matters — hook says seventeen,
 you write the eighteenth live, the break-it demo shows 18 run / 1 failed.
@@ -35,10 +36,11 @@ Lessons 01–06 — especially the mock layer.
 
 [Visual: Terminal runs one command; 17 green checkmarks cascade; cut to a
 robot on a practice field doing the same maneuvers the test names describe.]
-[Video Prompt: Dark terminal, single command typed, seventeen green
-checkmarks cascade down test names list rapidly, then cut to top-down robot
-field where robot performs strafe and turn maneuvers matching highlighted
-test names, satisfying completion animation, developer aesthetic]
+[Screen: real capture — type the single gradle test command and let the
+green checks cascade for real; then cut to sim b-roll of the robot
+strafing and turning]
+[Edit: highlight each test name as the sim performs the matching maneuver.
+DO NOT generate — real test output over fake terminals, always (Rule 3)]
 
 (Audio) Seventeen experiments on a competition robot just ran on my laptop.
 Four seconds. No robot. Not even the simulator. And one of those seventeen
@@ -55,8 +57,12 @@ this episode is the counter-argument.
 [Visual: Science-fair board layout — HYPOTHESIS / EXPERIMENT / RESULT — but
 each panel is code: an assertion, a mock call, a green check]
 [Prompt: Science fair trifold board dark theme, three panels labeled
-HYPOTHESIS EXPERIMENT RESULT containing short code snippet, mock robot
-icon, large green checkmark, playful science-meets-code teaching style]
+"HYPOTHESIS" "EXPERIMENT" "RESULT", first panel with a lightbulb icon,
+second with a cardboard-box robot icon, third with a large green
+checkmark, absolutely no other text, playful science-meets-code teaching
+style]
+[Edit: overlay real code snippets onto the panels if the beat needs them —
+the generated board must stay code-free (Rule 3)]
 
 (Audio) You already know what a test is — you've done a science fair. A
 hypothesis: "no matter what the driver does, wheel power never goes past
@@ -107,9 +113,10 @@ Eight experiments on the drivetrain, five on the arm, four on the claw.
 
 [Visual: The clamp test on screen, three regions highlighted — ARRANGE
 (mock + overdrive input), ACT (mecanumDrive call), ASSERT (±1.0 checks)]
-[Prompt: Dark code editor with JUnit test method, three translucent colored
-bands labeled ARRANGE ACT ASSERT in blue orange green over respective
-lines, annotated teaching code style]
+[Screen: the real clamp test method in the IDE]
+[Edit: three translucent bands over the real code — ARRANGE (blue), ACT
+(orange), ASSERT (green). Same treatment as lesson 01's file-map overlay.
+DO NOT generate — models invent fake Java (Rule 3)]
 
 (Audio) Open the one I promised you: mecanumDrive clamps wheel powers.
 Every test has the same three-beat shape — learn it once, read any test
@@ -150,9 +157,10 @@ didn't just fail — it POINTED at the crime. Restore the clamp... green.
 
 [Visual: Side-by-side terminal runs — 18/18 green, then 17/18 with one red
 line naming the clamp test, then green again]
-[Prompt: Three sequential terminal windows dark background, first all green
-checks, second showing single red X on highlighted test name among greens,
-third all green again, storytelling sequence, developer aesthetic]
+[Screen: three real test runs — all green; then break the clamp and let
+the single red X name the exact test; then fixed and green again]
+[Edit: arrange the three captures as a sequence strip. DO NOT generate —
+this beat's credibility IS the real output (Rule 3)]
 
 (Audio) That red-green cycle is the entire discipline, and here's the
 quiet part said out loud: this exact break-and-catch was performed on this

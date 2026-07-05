@@ -6,7 +6,8 @@
 DRIVE_TO_ZONE → STOP → DONE); the reusable skeleton is in LESSON.md.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
-`[Video Prompt:]` = generated motion (2 of 2 used) · `[Screen:]` = you record.
+`[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
 
 **Filming note:** the 5/5 drill must be REAL — five consecutive
 unedited-looking sim runs with an on-screen tally you add in edit. If a run
@@ -36,11 +37,12 @@ Lessons 01–09 — encoders are load-bearing here.
 [Visual: Scoreboard math on screen — Team A "40-pt auto, works 30%" vs
 Team B "25-pt park, works 95%" — running point totals tick up across 5
 simulated matches; B pulls ahead by match 3.]
-[Video Prompt: Dark scoreboard interface two team columns, five match icons
-fill in sequence, left column occasionally scores 40 with red X marks on
-failures, right column scores 25 nearly every match with green checks,
-running totals climb with right column overtaking by match three, data
-animation, sports broadcast style]
+[Edit: build the five-match scoreboard as a motion graphic — two columns,
+match icons filling in sequence, left column hitting 40 only sometimes
+(red X on failures), right scoring 25 nearly every match, running totals
+with the right column overtaking at match three. DO NOT generate — the
+exact numbers and the overtake ORDER are the argument (order-bearing
+motion + Rule 2)]
 
 (Audio) Team A built a forty-point autonomous. It works one match in
 three. Team B parks for twenty-five points — nineteen matches out of
@@ -100,9 +102,10 @@ lesson is about.
 
 [Visual: The while-condition on screen, each of three clauses highlighted
 as a labeled door — GOAL / TIMEOUT / REFEREE]
-[Prompt: Single line of Java while condition large on dark background,
-three clauses boxed in green yellow red labeled GOAL door TIMEOUT door
-REFEREE door, three small door icons beneath, code anatomy teaching style]
+[Screen: the real while-condition line in the IDE, blown up large]
+[Edit: box the three clauses in green/yellow/red with GOAL / TIMEOUT /
+REFEREE door labels and small door icons beneath. DO NOT generate — models
+invent fake Java (Rule 3)]
 
 (Audio) So: every motion loop gets three exit doors, always, no
 exceptions. Door one, GOAL: I traveled my twenty-four inches — the happy
@@ -160,11 +163,11 @@ congratulations, that's the system working.
 
 [Visual: Sim runs 5 consecutive times, a tally counter filling 5/5 green
 checks, state name changing in telemetry each run]
-[Video Prompt: Top-down simulator dark field, robot drives to parking zone
-and stops five times in rapid sequence, tally counter top right fills five
-green check marks one per run, telemetry state label cycles DRIVE STOP
-DONE each run, rhythmic repetition animation, satisfying reliability
-aesthetic]
+[Screen: five real consecutive ParkAuto sim runs, telemetry state label
+visible cycling DRIVE → STOP → DONE each run]
+[Edit: cut the five runs into a rhythmic sequence, tally counter overlay
+filling 5/5 green checks. DO NOT generate — five REAL runs is the
+reliability claim itself (Rule 3 + order-bearing motion)]
 
 [~4 minutes]
 

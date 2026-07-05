@@ -6,7 +6,7 @@ and reviewing every output. Scorecard: 3 usable as-generated, 4 fixed by
 prompt revision, 2 reclassified out of generation entirely. Apply this to
 lessons 02–12 before generating anything.
 
-## The Five Rules
+## The Six Rules
 
 ### 1. Describe the object, never the domain term
 
@@ -53,6 +53,16 @@ battery with a $0 tag; pixel-art game character vs slipping wheel). When a
 beat can be told with objects instead of interfaces, prefer it — cheaper,
 faster, and reliably on-style.
 
+### 6. Capture-first: never generate what the series can record for real
+
+The corollary that fell out of applying Rules 3–5 across every script:
+the simulator, terminals, the Driver Station, telemetry, diffs, and test
+output all exist and record for free. A generated fake of any of them
+trades authenticity — the series' core asset — for nothing. Same instinct
+as Rule 1's "this audience instantly spots a fake robot": they'll spot a
+fake sim too. Generation is for what cannot be filmed: metaphors, physics
+diagrams, stylized arenas, thumbnails, ambient texture motion.
+
 ## Tooling notes
 
 - `generate_assets.py <script.md>` parses ALL `[Prompt:]`/`[Video Prompt:]`
@@ -81,23 +91,27 @@ faster, and reliably on-style.
   the script and asset set out of lockstep is not finished — lesson 01
   drifted this way and it was caught during production.
 
-## Reclassification checklist (code-ish visuals → edit-time overlays)
+## Reclassification checklist — APPLIED 2026-07-05
 
-These scripted `[Prompt:]` visuals are subject to Rule 3 — build them in
-the editor over real screenshots instead of generating:
+The checklist below was executed across all 12 scripts (lesson 01 in its
+script-sync pass; 02–12 in one sweep). Every code/UI/terminal/telemetry
+visual is now `[Screen:]` + `[Edit:]`, order-bearing motion cues are
+editor-built, text-heavy cards are editor slides, and sim-footage video
+prompts became real sim captures (Rule 6). What remains `[Prompt:]` /
+`[Video Prompt:]` in the scripts is generation-safe: metaphors, physics
+diagrams, thumbnails, and one texture clip (L05 wheel close-up). Original
+scope, kept for reference:
 
 - **L01:** @TeleOp→menu callout; three-region color-boxed HelloWorld;
   the control-loop clip (order-bearing motion — see the video note above)
 - **L03:** OpMode skeleton with callouts; INIT/MATCH split file diagram
-  (generate the *abstract* split-zones version only if no code visible)
 - **L06:** before/after code split
 - **L07:** ARRANGE/ACT/ASSERT banded test
-- **L08:** dashboard-build split (the video prompt: keep motion abstract,
-  no readable code/UI)
+- **L08:** dashboard-build split
 - **L10:** three-exit-doors while-line anatomy
 - **L11:** the one-line diff
 - **L12:** config-screen collage (use real DS screenshots + drawn wires)
 
-Everything else in the scripts (metaphors, arenas, scoreboard stat cards,
-static loop diagrams) generates fine under Rules 1–4. Animated diagrams
-where the sequence carries meaning do not — see the video tooling note.
+Everything still cued for generation in the scripts is fine under Rules
+1–4; harden the prompt text (Rule 1 object descriptions, Rule 2 pinned
+structure, Rule 4 quoted text) during each lesson's asset pass.

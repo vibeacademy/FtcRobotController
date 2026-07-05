@@ -7,7 +7,8 @@ DRIVE_TO_ZONE → STOP → DONE); the reusable skeleton is in LESSON.md.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
 `[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record
-· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic)
+· `[Layout:]` = Descript scene layout (default pack names) — no cue = **Camera**.
 
 **Filming note:** the 5/5 drill must be REAL — five consecutive
 unedited-looking sim runs with an on-screen tally you add in edit. If a run
@@ -34,6 +35,7 @@ Lessons 01–09 — encoders are load-bearing here.
 
 ## Hook (0:00–0:45)
 
+[Layout: Media — the scoreboard motion graphic]
 [Visual: Scoreboard math on screen — Team A "40-pt auto, works 30%" vs
 Team B "25-pt park, works 95%" — running point totals tick up across 5
 simulated matches; B pulls ahead by match 3.]
@@ -76,6 +78,7 @@ at any moment, and the telemetry can SAY which one — remember the
 dashboard. Debugging an auto becomes "which box is it stuck in," which is
 a question you can actually answer.
 
+[Layout: Media]
 [Visual: Whiteboard-style state diagram, three boxes DRIVE_TO_ZONE / STOP /
 DONE, labeled transition arrows, a red "timeout" arrow exiting every box]
 [Prompt: Hand-drawn style state machine on dark background, three rounded
@@ -100,6 +103,7 @@ rest of autonomous. It will not stop. It CANNOT stop — "there yet" is
 never coming, because the wall gets a vote. I've smelled the motor this
 lesson is about.
 
+[Layout: Screen — clause boxes as Descript layers]
 [Visual: The while-condition on screen, each of three clauses highlighted
 as a labeled door — GOAL / TIMEOUT / REFEREE]
 [Screen: the real while-condition line in the IDE, blown up large]
@@ -161,6 +165,7 @@ parked. Two... parked. Three... four... five. Five for five. THAT is what
 "my autonomous works" means. Anything less, you found a bug early —
 congratulations, that's the system working.
 
+[Layout: Screen — sequential cuts, tally as a layer]
 [Visual: Sim runs 5 consecutive times, a tally counter filling 5/5 green
 checks, state name changing in telemetry each run]
 [Screen: five real consecutive ParkAuto sim runs, telemetry state label

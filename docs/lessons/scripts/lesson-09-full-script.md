@@ -8,7 +8,8 @@ has the counts-per-inch worksheet with a worked REV HD Hex example.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
 `[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record
-· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic)
+· `[Layout:]` = Descript scene layout (default pack names) — no cue = **Camera**.
 
 **Filming note:** if you can film the blindfold bit physically (you, five
 steps, eyes closed, in the workshop), DO it — 15 seconds of real footage
@@ -34,6 +35,7 @@ Arcs 1–2. The dashboard from lesson 08 — sensors join it today.
 
 ## Hook (0:00–0:40)
 
+[Layout: Media — 2-up composite of the runs]
 [Visual: Two sim robots told to drive "exactly 24 inches." Robot A
 (time-based) stops short on a fresh battery run, overshoots on the second
 run. Robot B (encoders) nails the same spot twice. Tape-measure overlay.]
@@ -71,6 +73,7 @@ robot walking with its eyes shut, counting steps. Eyes open is CLOSED
 LOOP: command, MEASURE what actually happened, adjust, repeat. The
 measuring is what sensors are for.
 
+[Layout: Media]
 [Visual: Two loop diagrams — open: brain → motors (one-way arrow); closed:
 brain → motors → wheels → encoder → back to brain (circle)]
 [Prompt: Two diagrams side by side dark background, left one-way arrow
@@ -118,6 +121,7 @@ numbers, arriving fifty times a second, in the same loop as everything
 else. Sensors aren't magic. They're rows on the dashboard the robot fills
 in itself.
 
+[Layout: Screen — annotations as Descript layers]
 [Visual: Dashboard SENSORS zone: left ticks 537 → "12.4 in", heading
 87.3° → a compass rose graphic tracking as robot spins]
 [Screen: the real SENSORS telemetry zone — encoder ticks and heading
@@ -144,6 +148,7 @@ Wishes out, truth in, adjust, repeat — fifty times a second.
 
 ## The 4 Sensor Gotchas (7:30–9:45)
 
+[Layout: List — the four gotchas typed natively]
 [Visual: Four-row warning card, each row a gotcha with a small icon —
 slipping wheel, stale counter, flipped compass, copied worksheet]
 [Edit: build the four-gotcha warning card as a slide — numbered rows with

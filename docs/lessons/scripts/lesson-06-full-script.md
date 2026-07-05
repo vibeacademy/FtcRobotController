@@ -8,7 +8,8 @@ lesson-05 IS the lesson — show it.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
 `[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record
-· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic)
+· `[Layout:]` = Descript scene layout (default pack names) — no cue = **Camera**.
 
 **Filming note:** flag on camera that this is the series' first
 "architecture" episode — no new robot behavior at the end, better bones
@@ -33,6 +34,7 @@ Lessons 01–05.
 
 ## Hook (0:00–0:40)
 
+[Layout: Media — exported collage]
 [Visual: The same TeleOp file shown three times, arrows to three targets —
 a real Control Hub, the simulator, and a laptop running tests — all green
 checkmarks.]
@@ -56,6 +58,7 @@ biggest check this idea writes.
 
 ## Program to the Socket (0:40–4:00)
 
+[Layout: Media — full-bleed still]
 [Visual: Wall socket labeled IDrivetrain; two plugs approaching — one cable
 runs to a real robot, other to a cardboard-box "mock" — both fit]
 [Prompt: Stylized wall socket icon labeled IDrivetrain dark background, two
@@ -144,6 +147,7 @@ The config said there's an arm; if reality disagrees, the OpMode shrugs
 instead of crashing. Optional hardware always gets a null check — that's a
 team rule in this repo, and now you know why.
 
+[Layout: Media — 2-up composite of the two captures]
 [Visual: Before/after code split — left tangled OpMode with raw motors,
 right short OpMode reading like English, both compile-check green]
 [Screen: the REAL before/after — the raw-motor OpMode and the refactored

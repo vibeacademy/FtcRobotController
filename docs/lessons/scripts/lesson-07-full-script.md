@@ -8,7 +8,8 @@ this video. The break-it exercise targets `MockDrivetrain.clip()`.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
 `[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record
-· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic)
+· `[Layout:]` = Descript scene layout (default pack names) — no cue = **Camera**.
 
 **Filming note:** the narrative arithmetic matters — hook says seventeen,
 you write the eighteenth live, the break-it demo shows 18 run / 1 failed.
@@ -34,6 +35,7 @@ Lessons 01–06 — especially the mock layer.
 
 ## Hook (0:00–0:40)
 
+[Layout: Screen — terminal full-bleed, then sim b-roll]
 [Visual: Terminal runs one command; 17 green checkmarks cascade; cut to a
 robot on a practice field doing the same maneuvers the test names describe.]
 [Screen: real capture — type the single gradle test command and let the
@@ -54,6 +56,7 @@ this episode is the counter-argument.
 
 ## Tests Are Rerunnable Experiments (0:40–3:00)
 
+[Layout: Media]
 [Visual: Science-fair board layout — HYPOTHESIS / EXPERIMENT / RESULT — but
 each panel is code: an assertion, a mock call, a green check]
 [Prompt: Science fair trifold board dark theme, three panels labeled
@@ -111,6 +114,7 @@ Eight experiments on the drivetrain, five on the arm, four on the claw.
 
 [Screen: the clamp test method in the editor, then the three-band overlay]
 
+[Layout: Screen — bands as Descript layers]
 [Visual: The clamp test on screen, three regions highlighted — ARRANGE
 (mock + overdrive input), ACT (mecanumDrive call), ASSERT (±1.0 checks)]
 [Screen: the real clamp test method in the IDE]
@@ -155,6 +159,7 @@ suite is real, it should notice. Run... and there it is. One red line.
 Eighteen tests ran, one failed: mecanumDrive clamps wheel powers. It
 didn't just fail — it POINTED at the crime. Restore the clamp... green.
 
+[Layout: Media — 3-up composite of the three runs]
 [Visual: Side-by-side terminal runs — 18/18 green, then 17/18 with one red
 line naming the clamp test, then green again]
 [Screen: three real test runs — all green; then break the clamp and let

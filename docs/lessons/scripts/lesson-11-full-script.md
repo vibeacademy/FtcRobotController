@@ -8,7 +8,8 @@
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
 `[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record
-· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic)
+· `[Layout:]` = Descript scene layout (default pack names) — no cue = **Camera**.
 
 **Filming note:** the tuning session (9:00) is the reality-TV of this
 episode — do it live in TuneKpOpMode with real values (0.005 crawl, 0.08
@@ -35,6 +36,7 @@ multiplication.
 
 ## Hook (0:00–0:40)
 
+[Layout: Media — 2-up composite of the two runs]
 [Visual: Two sim robots drive to a line. Robot A at full power slams past
 it, backs up, overshoots again — oscillating. Robot B glides in like a
 driver easing up to a stop sign, slowing as it arrives. Error counts to
@@ -66,6 +68,7 @@ zero, line at twenty-four inches — error is twenty-four. Drive to
 twenty-three — error is one. Blow past to twenty-six — error is MINUS two,
 and that minus sign is about to matter.
 
+[Layout: Media]
 [Visual: Number line — robot position, target flag; an arrow (power) whose
 length shrinks as position approaches target, flips direction past it]
 [Prompt: Horizontal number line dark background, robot icon and target
@@ -122,6 +125,7 @@ twenty-four inches of error, kP times error would ask for way more than
 full power — the clamp caps it. Everything in this series composes.
 That's not an accident; that's what an architecture is.
 
+[Layout: Screen — highlight as a Descript layer]
 [Visual: The one-line diff — fixed 0.5 power replaced by kP*error
 expression — then the loop diagram with the multiply node inserted between
 sensor and motor]
@@ -173,6 +177,7 @@ there's our hook robot — slam, reverse, slam — oscillation. Dramatic
 failure. Bisect... zero point zero two... fast approach, smooth arrival,
 no overshoot. That's the one. Write it down in your constants.
 
+[Layout: Media — 3-up composite of the three runs]
 [Visual: Three sim runs stacked — kP = 0.005 (crawl), 0.08 (oscillate),
 0.02 (clean settle) — with a "symptom → diagnosis" table appearing]
 [Screen: three real Tune-kP sim runs — too low (crawl), too high

@@ -7,7 +7,8 @@
 lesson-05 IS the lesson — show it.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
-`[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record.
+`[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
 
 **Filming note:** flag on camera that this is the series' first
 "architecture" episode — no new robot behavior at the end, better bones
@@ -35,10 +36,12 @@ Lessons 01–05.
 [Visual: The same TeleOp file shown three times, arrows to three targets —
 a real Control Hub, the simulator, and a laptop running tests — all green
 checkmarks.]
-[Prompt: Dark background center code file icon with three glowing arrows to
-real circuit board photo, simulator window screenshot, and terminal with
-green test checkmarks, label ONE FILE THREE WORLDS, clean architecture
-diagram style, 16:9]
+[Screen: grab the three real elements — a sim window screenshot and a
+green test-run terminal capture (plus a Control Hub photo)]
+[Edit: collage — code-file icon center, three glowing arrows out to the
+real hub photo, real sim screenshot, real terminal capture, "ONE FILE
+THREE WORLDS" label. DO NOT generate the sim/terminal panes — fake UI
+garbles (Rule 3); the icon and arrows are editor work]
 
 (Audio) One file. Three worlds. A real robot. A simulator. And — here's
 the new one — a plain laptop running automated tests, no robot, no
@@ -143,9 +146,11 @@ team rule in this repo, and now you know why.
 
 [Visual: Before/after code split — left tangled OpMode with raw motors,
 right short OpMode reading like English, both compile-check green]
-[Prompt: Split code comparison dark editor, left long tangled Java with red
-complexity squiggles, right compact clean version with green glow, arrow
-labeled REFACTOR between them, developer teaching aesthetic]
+[Screen: the REAL before/after — the raw-motor OpMode and the refactored
+version; both live in this lesson's branch diff]
+[Edit: side-by-side, red squiggle accents left, green glow right, REFACTOR
+arrow between. DO NOT generate — models invent fake Java (Rule 3), and the
+real diff is the lesson's whole point]
 
 [Screen: sim run of TeamTeleOp — driving identically to lesson 05]
 

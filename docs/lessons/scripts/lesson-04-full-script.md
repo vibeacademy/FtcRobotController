@@ -6,7 +6,8 @@
 drive) and the LESSON.md with sim setup + the JavaFX full-JDK gotcha.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
-`[Video Prompt:]` = generated motion (≤2; 1 used) · `[Screen:]` = you record.
+`[Video Prompt:]` = generated motion (1 used) · `[Screen:]` = you record
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
 
 **Filming notes:** clone the PINNED fork (`vibeacademy/virtual_robot`) on
 camera — that's the link viewers get. Credit Beta8397 verbally where marked.
@@ -145,10 +146,12 @@ worlds.
 [Visual: Same OpMode file shown center, arrows out to a simulator window
 on one side and a photo-real robot on the other, "same names, same code"
 label]
-[Prompt: Center dark code editor with Java file, two arrows to left
-simulator screenshot with top-down field and to right realistic
-competition robot photo, glowing label same code both worlds, symmetric
-composition, teaching diagram style]
+[Screen: two captures — the OpMode file in the IDE, and a real simulator
+screenshot of the top-down field]
+[Edit: symmetric collage — code capture center, sim screenshot one side,
+robot photo the other (reuse the ep01 robot still or a real photo),
+glowing "same names, same code" label. DO NOT generate — fake Java + fake
+sim UI (Rule 3)]
 
 [~5 minutes]
 

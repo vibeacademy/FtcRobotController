@@ -7,7 +7,8 @@ SENSORS zone (`COUNTS_PER_INCH` constant at the top of the file); LESSON.md
 has the counts-per-inch worksheet with a worked REV HD Hex example.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
-`[Video Prompt:]` = generated motion (1 used) · `[Screen:]` = you record.
+`[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
 
 **Filming note:** if you can film the blindfold bit physically (you, five
 steps, eyes closed, in the workshop), DO it — 15 seconds of real footage
@@ -36,10 +37,11 @@ Arcs 1–2. The dashboard from lesson 08 — sensors join it today.
 [Visual: Two sim robots told to drive "exactly 24 inches." Robot A
 (time-based) stops short on a fresh battery run, overshoots on the second
 run. Robot B (encoders) nails the same spot twice. Tape-measure overlay.]
-[Video Prompt: Top-down simulator dark field, two robots drive toward
-glowing line, left robot stops short first run then overshoots second run
-with red distance markers, right robot stops exactly on line both runs
-with green checkmarks, tape measure graphic overlay, comparison animation]
+[Screen: real sim runs — the time-based auto twice (stops short, then
+overshoots) and the encoder auto twice (nails the line both times)]
+[Edit: side-by-side composite with red distance markers, green checks, and
+the tape-measure overlay. DO NOT generate — inconsistency vs repeatability
+is the teaching point; record it (order-bearing motion)]
 
 (Audio) Both robots got the same mission: drive exactly twenty-four
 inches. The left one runs the code from every beginner tutorial on the
@@ -118,9 +120,11 @@ in itself.
 
 [Visual: Dashboard SENSORS zone: left ticks 537 → "12.4 in", heading
 87.3° → a compass rose graphic tracking as robot spins]
-[Prompt: Telemetry dashboard dark UI with SENSORS section, encoder tick
-numbers converting to inches with arrow, compass rose dial spinning to 87
-degrees as small robot icon rotates, live instrument aesthetic]
+[Screen: the real SENSORS telemetry zone — encoder ticks and heading
+updating live while the robot moves and spins in the sim]
+[Edit: annotate ticks → inches with an arrow; add a compass-rose graphic
+tracking the real heading value. DO NOT generate — real telemetry only
+(Rule 3)]
 
 [~3 minutes]
 
@@ -142,9 +146,11 @@ Wishes out, truth in, adjust, repeat — fifty times a second.
 
 [Visual: Four-row warning card, each row a gotcha with a small icon —
 slipping wheel, stale counter, flipped compass, copied worksheet]
-[Prompt: Dark warning card four numbered rows with small icons of slipping
-wheel, counter with cobwebs, upside down compass, photocopied paper with
-red X, clean cautionary infographic style]
+[Edit: build the four-gotcha warning card as a slide — numbered rows with
+the exact labels from the narration. The icons (slipping wheel, cobwebbed
+counter, flipped compass, photocopied worksheet) may be generated
+individually as clean single-subject stills. Multi-row described text
+garbles when generated (Rule 4)]
 
 (Audio) Four ways sensors will lie to you, each with a ten-second
 telemetry check. One: encoders measure WHEEL rotation, not robot position.

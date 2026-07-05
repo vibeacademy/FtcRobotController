@@ -6,7 +6,8 @@
 mixing table lives in its header comment. Both video-prompt slots used.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
-`[Video Prompt:]` = generated motion (2 of 2 used) · `[Screen:]` = you record.
+`[Video Prompt:]` = generated motion (1 used) · `[Screen:]` = you record
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
 
 **Filming note:** the clipped-vs-normalized comparison (8:00) is the money
 demo. Record it in the sim by literally commenting out the normalize block,
@@ -36,10 +37,13 @@ Arc 1 — you can write an OpMode and drive it in the sim.
 [Visual: Sim robot drives a perfect diagonal while spinning slowly —
 impossible for a car — then a real mecanum wheel close-up with its angled
 rollers.]
-[Video Prompt: Top-down robot simulator dark field, square robot slides
-diagonally across field while rotating smoothly at same time leaving
-glowing trail, cut to close-up render of mecanum wheel with 45-degree
-angled silver rollers spinning, smooth motion, tech aesthetic]
+[Screen: real sim capture — drive the Mecanum Bot in a diagonal strafe
+while rotating, the impossible-for-a-car move; add a motion-trail accent
+in edit if wanted. Never generate fake simulator footage — the real sim
+is the series' whole promise]
+[Video Prompt: Close-up render of a mecanum wheel with 45-degree angled
+silver rollers spinning slowly, dark background, smooth ambient motion,
+tech aesthetic]
 
 (Audio) Look at this robot. It's driving diagonally... while spinning. No
 car on earth can do that. The secret is half hardware — those weird wheels
@@ -94,10 +98,11 @@ turn three intentions into four wheel powers.
 
 [Visual: 4×3 color grid — rows are wheels, columns are drive/strafe/turn,
 each cell + or −, matching colored signs in the code beside it]
-[Prompt: Matrix table dark background, four rows labeled FL FR BL BR,
-three columns labeled DRIVE STRAFE TURN in blue orange yellow, plus and
-minus signs in cells, adjacent code snippet with same colors highlighted,
-clean teaching infographic]
+[Screen: the real mecanum mixing code in the IDE]
+[Edit: build the 4×3 sign table as a slide — rows FL FR BL BR, columns
+DRIVE/STRAFE/TURN in blue/orange/yellow — and color-match highlights onto
+the real code beside it. DO NOT generate — one hallucinated minus sign
+teaches the wrong math (Rules 2 and 3)]
 
 (Audio) Here's the recipe card — don't memorize it, understand its shape.
 Every wheel gets all three ingredients: drive, strafe, turn. The only
@@ -148,11 +153,12 @@ the engine.
 
 [Visual: Two sim runs side by side — "clipped" robot curving off path,
 "normalized" robot driving true, both from same stick input]
-[Video Prompt: Split screen top-down simulator dark field, both robots
-receive identical glowing stick input overlay, left robot labeled CLIPPED
-drifts off course curving badly, right robot labeled NORMALIZED drives
-perfectly straight diagonal, synchronized animation, teaching comparison
-style]
+[Screen: two real sim runs from the same stick input — one on the
+clipped code, one on the normalized code (both versions are in this
+lesson's git history)]
+[Edit: side-by-side composite, CLIPPED / NORMALIZED labels, stick-input
+overlay. DO NOT generate — the behavioral difference is the teaching
+point; record it, don't fake it (order-bearing motion)]
 
 [Screen: typing the normalize block — find the max magnitude, divide all
 four when max > 1]

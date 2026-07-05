@@ -8,7 +8,8 @@ LESSON.md as the graduation page.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
 `[Video Prompt:]` = generated motion (0 used — this episode is real
-hardware footage) · `[Screen/Camera:]` = you record.
+hardware footage) · `[Screen/Camera:]` = you record
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
 
 **Filming notes:** this is the one episode with a HARDWARE dependency — a
 Control Hub, a Driver Station device, and ideally a rolling chassis. Say
@@ -90,10 +91,12 @@ once.
 [Visual: Driver Station config screen; each name line connects by a drawn
 wire to a motor port on a hub photo; one name glowing as it's typed to
 match the code's constant]
-[Prompt: Smartphone config screen UI beside real control hub photo dark
-background, drawn glowing wires connecting name entries to physical ports,
-one entry highlighted matching code snippet constant shown above,
-technical teaching collage style]
+[Screen: the real Driver Station configuration screen, and a photo of
+the actual Control Hub with its ports visible]
+[Edit: collage — draw glowing wires from each config name entry to its
+physical port; highlight the one entry as it's typed to match the code
+constant (real code capture above). DO NOT generate — fake DS config UI
+is exactly the Rule 3 failure mode]
 
 (Audio) And now the payoff line of the entire series. To move from
 simulator to metal, our code changed... not at all. Zero lines. Only the
@@ -146,10 +149,11 @@ ten were built for exactly this gap.
 
 [Visual: Same ParkAuto telemetry side by side — sim run vs field run —
 values slightly different, both parking; a battery voltage readout sagging]
-[Prompt: Two telemetry dashboards side by side labeled SIM and FIELD dark
-background, nearly matching values with small highlighted differences,
-battery voltage 13.8 vs 12.3 highlighted amber, both showing PARKED state
-green, honest engineering comparison style]
+[Screen: two real ParkAuto telemetry captures — one from the sim, one
+from the field robot (grab the field one at any practice session)]
+[Edit: side-by-side with SIM / FIELD labels, amber highlight on the
+battery-voltage gap, green on both PARKED states. DO NOT generate — an
+"honest engineering comparison" requires honest screenshots (Rule 3)]
 
 [~2 minutes 30 seconds]
 
@@ -188,9 +192,12 @@ can feel it. Be the closed laptop.
 
 [Visual: The printable checklist, checkmarks landing one by one; a red
 "CODE FREEZE" banner with a date and a padlock over the repo]
-[Prompt: Printed checklist on clipboard dark pit background, green
-checkmarks appearing sequentially on five items, red banner CODE FREEZE
-with padlock icon over repository symbol, procedural calm aesthetic]
+[Edit: build from the episode's REAL printable checklist
+(docs/PIT-CHECKLIST.md) — render the actual document on a clipboard,
+animate green checks landing on its real items, then the red CODE FREEZE
+banner with padlock over a repo icon. Described list text garbles when
+generated (Rule 4), and this artifact ships to learners — the words must
+match the printable]
 
 [~3 minutes]
 
@@ -198,9 +205,11 @@ with padlock icon over repository symbol, procedural calm aesthetic]
 
 [Visual: The 12 lesson branches as a subway-map line, each stop lit, from
 "hello-robot" to "competition-ops"]
-[Prompt: Dark subway map style single line with twelve glowing station
-stops labeled with short lesson names from hello robot to competition ops,
-final station starburst, celebratory but clean infographic style]
+[Edit: build the subway map as a slide — one line, twelve stations
+labeled with the real lesson names, starburst on the final stop. Twelve
+labels is 3x past what generation renders reliably (Rule 4); optionally
+generate an UNLABELED station-line background and set the names in the
+editor]
 
 (Audio) Twelve lessons ago, you'd never seen an OpMode. Count what you
 can do now — and I mean actually do, because you did each one: build a

@@ -6,7 +6,8 @@
 checklist; keep it open in a browser tab while filming.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
-`[Video Prompt:]` = generated motion (≤2) · `[Screen:]` = you record it.
+`[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record it
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
 
 **Filming note:** the setup section (3:00–9:00) is best captured as ONE real
 install on a machine (or fresh user account) that has never had Android
@@ -97,9 +98,11 @@ allowed to ignore — that's the actual skill, and it's ninety-five percent
 of this repo.
 
 [Visual: Repo tree with everything grayed out except TeamCode glowing]
-[Prompt: File tree diagram dark background, dozens of gray dimmed folder
-rows, single folder TeamCode glowing bright blue with "yours" label,
-minimal developer aesthetic]
+[Screen: the real project tree in Android Studio's panel, TeamCode
+folder visible among the rest]
+[Edit: dim everything except TeamCode, blue glow + "yours" label on it.
+DO NOT generate — a fake tree means fake folder names (Rule 3); the real
+panel is a ten-second capture]
 
 [~60 seconds]
 
@@ -151,9 +154,11 @@ on real FTC robots. No robot involved. That's the whole unlock.
 
 [Visual: Terminal with BUILD SUCCESSFUL in green, timer showing real
 elapsed time]
-[Prompt: Dark terminal window screenshot style, green text BUILD SUCCESSFUL
-in 2m 14s, subtle confetti particles around the text, developer celebration
-aesthetic]
+[Screen: the REAL first build — terminal running to green BUILD
+SUCCESSFUL with the true elapsed time on screen]
+[Edit: optional confetti burst on the SUCCESSFUL line. DO NOT generate —
+this is the episode's payoff moment; it must be an actual terminal, not a
+faked one (Rule 3)]
 
 [~6 minutes]
 

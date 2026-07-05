@@ -7,7 +7,8 @@
 (dpad adjusts kP, A runs a 24-inch move, B resets encoders).
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
-`[Video Prompt:]` = generated motion (1 used) · `[Screen:]` = you record.
+`[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
 
 **Filming note:** the tuning session (9:00) is the reality-TV of this
 episode — do it live in TuneKpOpMode with real values (0.005 crawl, 0.08
@@ -38,11 +39,12 @@ multiplication.
 it, backs up, overshoots again — oscillating. Robot B glides in like a
 driver easing up to a stop sign, slowing as it arrives. Error counts to
 zero beside B.]
-[Video Prompt: Top-down dark simulator, left robot approaches glowing
-target line at full speed overshoots reverses overshoots again in decaying
-oscillation with red trail, right robot approaches fast then smoothly
-decelerates settling exactly on line with blue trail and error counter
-ticking to zero, side by side loop animation]
+[Screen: two real sim runs — bang-bang full power (overshoot, reverse,
+oscillate) vs P-control (smooth decelerating settle); both OpModes are on
+this lesson's branch]
+[Edit: side-by-side composite, red/blue trail accents, error counter
+overlay ticking to zero on the P-control side. DO NOT generate — these two
+behaviors are the entire lesson; record them (order-bearing motion)]
 
 (Audio) Both robots know EXACTLY how far away that line is — same
 encoders, same math as last lesson. The left one drives like a beginner:
@@ -123,10 +125,12 @@ That's not an accident; that's what an architecture is.
 [Visual: The one-line diff — fixed 0.5 power replaced by kP*error
 expression — then the loop diagram with the multiply node inserted between
 sensor and motor]
-[Prompt: Code diff dark editor, single line change from constant 0.5 to kP
-times error highlighted green, beneath it circular control loop diagram
-with new multiplication node glowing between encoder and motor icons,
-minimal teaching style]
+[Screen: the real one-line diff — constant 0.5 becoming kP * error — in
+the IDE or the branch's GitHub diff view]
+[Edit: green highlight on the changed line; beneath it, the loop diagram
+with a multiplication node glowing between encoder and motor (reuse the
+E01-04 motion-graphic styling). DO NOT generate — fake diffs are fake code
+(Rule 3)]
 
 [Screen: the MIN_DRIVE_POWER floor in PBaseAuto; telemetry showing a robot
 stalled 2 inches short before the floor existed]
@@ -171,11 +175,12 @@ no overshoot. That's the one. Write it down in your constants.
 
 [Visual: Three sim runs stacked — kP = 0.005 (crawl), 0.08 (oscillate),
 0.02 (clean settle) — with a "symptom → diagnosis" table appearing]
-[Prompt: Three horizontal simulator strips stacked dark background labeled
-with kP values, top robot barely moving with snail icon, middle robot
-zigzag oscillating with warning icon, bottom robot smooth clean arrival
-with checkmark, symptom diagnosis table appearing right side, teaching
-comparison style]
+[Screen: three real Tune-kP sim runs — too low (crawl), too high
+(oscillate), right (clean settle)]
+[Edit: stack the three strips with kP value labels and
+snail/warning/checkmark icons; build the symptom → diagnosis table as a
+slide beside them. DO NOT generate — the three behaviors must be real
+runs (Rule 3), and table text garbles (Rule 4)]
 
 (Audio) Memorize the symptom table — I'll say it twice because it's the
 takeaway: oscillates means kP too HIGH. Crawls means kP too LOW.

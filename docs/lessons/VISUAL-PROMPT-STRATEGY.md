@@ -62,9 +62,14 @@ faster, and reliably on-style.
   fixed by preprocessing).
 - Images ≈ $0.01–0.02 each (Gemini Flash); video ≈ $0.10–0.20 (Veo 3).
   Iterating on stills is cheap — plan a v1 → review → v2 pass per lesson.
-  Iterating on video is not — get motion prompts right first try:
-  explicitly state flow direction ("pulse travels clockwise: gamepad, then
-  chip, then motors, then back to gamepad"), or the model muddles it.
+  Iterating on video is not. And explicit flow direction is NOT enough:
+  the L01 loop-diagram clip missed twice — v1 muddled the direction, and
+  the v2 retry (direction stated explicitly, node by node) came back with
+  the causal order reversed, double-headed arrows, and a garbled timer.
+  **Rule of thumb: if the motion's ORDER carries the meaning (A must feed
+  B must feed C), it's an editor-built motion graphic, not a generation.**
+  Generated video is for texture and vibe — ambient motion, b-roll-ish
+  loops — where no specific sequence has to be correct.
 - Output convention: generation runs in content-marketing
   (`videos/ftc-software-robotics-epNN/assets/`, `assets-v2/` for revision
   passes) — but that output is **workshop scratch, not the deliverable**.
@@ -81,7 +86,8 @@ faster, and reliably on-style.
 These scripted `[Prompt:]` visuals are subject to Rule 3 — build them in
 the editor over real screenshots instead of generating:
 
-- **L01:** @TeleOp→menu callout; three-region color-boxed HelloWorld
+- **L01:** @TeleOp→menu callout; three-region color-boxed HelloWorld;
+  the control-loop clip (order-bearing motion — see the video note above)
 - **L03:** OpMode skeleton with callouts; INIT/MATCH split file diagram
   (generate the *abstract* split-zones version only if no code visible)
 - **L06:** before/after code split
@@ -93,4 +99,5 @@ the editor over real screenshots instead of generating:
 - **L12:** config-screen collage (use real DS screenshots + drawn wires)
 
 Everything else in the scripts (metaphors, arenas, scoreboard stat cards,
-loop diagrams) generates fine under Rules 1–4.
+static loop diagrams) generates fine under Rules 1–4. Animated diagrams
+where the sequence carries meaning do not — see the video tooling note.

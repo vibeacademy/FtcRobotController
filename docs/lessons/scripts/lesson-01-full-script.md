@@ -114,16 +114,15 @@ again. Fifty times a second, until the match ends.
 
 [Visual: Animated loop — gamepad icon → "decide" brain node → motor icons →
 back to gamepad, cycling continuously with a 20ms timer]
-[Video Prompt: Dark background circular flow diagram with three fixed
-nodes arranged in a ring — a gamepad icon at the left, a brain/chip node at
-the top, four motor icons grouped at the right — a single glowing blue
-pulse travels clockwise: from the gamepad, then to the chip, then to the
-motors, then back to the gamepad, repeating continuously in the same
-direction, small 20ms timer counting up each full cycle, smooth seamless
-loop animation, tech aesthetic]
-[Asset: production/ep01/E01-04-control-loop.mp4 — PENDING: v1 clip lost
-with the old machine; regenerate (~$0.15) with this prompt, review the
-flow direction in motion before accepting]
+[Edit: build this as a motion graphic in the editor — three nodes in a
+ring (gamepad left, chip top, motors right), one glowing blue pulse
+cycling gamepad → chip → motors → back to gamepad, single-headed arrows
+only, and a "20 ms" counter that ticks once per revolution as a clean
+text overlay. DO NOT generate — Veo missed this twice (v1: direction
+muddled; v2: causal order reversed, double-headed arrows, garbled timer;
+clip archived in content-marketing assets-v3). The pulse ORDER is the
+teaching point: read, decide, command. Export as
+production/ep01/E01-04-control-loop.mp4]
 
 (Audio) Which means your code doesn't really DO things. Your code gets
 asked a question, over and over: "what should the motors do RIGHT NOW?" And
@@ -316,7 +315,7 @@ sci-fi armor]
 
 **Assets:** all finals in `production/ep01/` on the `lesson-01-hello-robot`
 branch — see its `ASSETS.md` for the cue map. 5 generated stills +
-thumbnail are ✅ committed; 1 video clip (E01-04) pending regeneration; 2
-edit-time composites (E01-06/07) built from shots 2/4/5 above.
+thumbnail are ✅ committed; 3 edit-time builds — the E01-04 motion graphic
+(nothing to generate) and the E01-06/07 composites from shots 2/4/5 above.
 Metadata, tags, description, and pinned comment: see the media packet in
 `docs/lessons/lesson-01.md` — chapters match this script's section times.

@@ -211,9 +211,12 @@ an empty file. See you there.
 Laptop with green BUILD SUCCESSFUL on screen; behind it, a ghosted/outlined
 robot with a "not required" stamp.
 [Prompt: YouTube thumbnail 1280x720, laptop front and center with green
-BUILD SUCCESSFUL terminal text, translucent wireframe robot outline behind
-with red NOT REQUIRED stamp, bold white text "NO ROBOT NEEDED", dark
-background, high contrast youth tech style]
+BUILD SUCCESSFUL terminal text clearly visible, behind it a translucent
+glowing blue wireframe outline of a small cube-shaped wheeled competition
+robot chassis with a red NOT REQUIRED stamp across the robot only, bold
+white text "NO ROBOT NEEDED" at the top, dark background, high contrast
+youth tech style, not humanoid, no human figure, no legs]
+[Asset: production/ep02/E02-thumbnail.png]
 
 ---
 

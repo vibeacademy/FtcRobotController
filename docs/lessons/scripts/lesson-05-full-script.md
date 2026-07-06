@@ -215,10 +215,11 @@ robot code at once... without fighting over one robot. See you there.
 
 Top-down robot with four 45° force arrows visibly combining into a big
 sideways arrow; text "THE MECANUM MATH."
-[Prompt: YouTube thumbnail 1280x720, top-down stylized robot with four
-glowing orange diagonal arrows merging into one large blue horizontal
-arrow, bold white text THE MECANUM MATH, dark background high contrast,
-physics diagram energy]
+[Prompt: YouTube thumbnail 1280x720, top-down stylized square robot chassis
+with four glowing orange diagonal arrows merging into one large blue
+horizontal arrow, bold white text "THE MECANUM MATH", dark background high
+contrast, physics diagram energy, not humanoid]
+[Asset: production/ep05/E05-thumbnail.png]
 
 ---
 

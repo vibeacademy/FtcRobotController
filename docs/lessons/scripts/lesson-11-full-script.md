@@ -220,10 +220,11 @@ code freeze, and the match-day checklist. The calm pit. See you there.
 
 A robot gliding onto a target line with a shrinking power arrow; big
 equation "P = kP × error"; text "ONE LINE."
-[Prompt: YouTube thumbnail 1280x720, robot easing onto glowing target line
-with three shrinking motion arrows behind it, large clean equation power
-equals kP times error in white, bold text ONE LINE, dark background,
-elegant physics aesthetic]
+[Prompt: YouTube thumbnail 1280x720, small boxy wheeled competition robot
+easing onto glowing target line with three shrinking motion arrows behind
+it, large clean equation "power = kP × error" in white, bold text "ONE
+LINE", dark background, elegant physics aesthetic, not humanoid, no legs]
+[Asset: production/ep11/E11-thumbnail.png]
 
 ---
 

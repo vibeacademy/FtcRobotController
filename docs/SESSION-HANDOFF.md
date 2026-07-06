@@ -23,8 +23,9 @@ vibeacademy channel. GembaFlow agent workflow (agents + commands in
   machine setup).
 - **Lesson series, fully authored**: plan + persona (`docs/lessons/README.md`
   — the persona and banned-vocab table are LAW for all series content),
-  12 lesson packets (`docs/lessons/lesson-NN.md`), 12 full shooting scripts
-  (`docs/lessons/scripts/`), operator runbook
+  12 lesson packets + 12 full shooting scripts (consolidated 2026-07-06:
+  each lives on its lesson branch as `production/epNN/PACKET.md` and
+  `SCRIPT.md`), operator runbook
   (`docs/lessons/OPERATOR-RUNBOOK.md`), visual prompt strategy
   (`docs/lessons/VISUAL-PROMPT-STRATEGY.md` — in PR #28 if not yet merged),
   `LESSONS.md` index at repo root.
@@ -128,7 +129,7 @@ vibeacademy channel. GembaFlow agent workflow (agents + commands in
 4. Runbook Phase 0 leftovers (all human): recording rig + one test clip;
    YouTube playlist; lesson 01 publish date (publish-blocking, not
    record-blocking).
-5. Film lesson 01 (script: `docs/lessons/scripts/lesson-01-full-script.md`,
+5. Film lesson 01 (script: `production/ep01/SCRIPT.md` on the lesson branch,
    6 stills committed at `production/ep01/` on the lesson branch, shot
    list at the script's bottom; E01-04/06/07 are edit-time builds).
 6. Per-lesson pipeline per the runbook: asset pass (SOP!) → record →

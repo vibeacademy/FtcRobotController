@@ -3,6 +3,14 @@
 A progressive YouTube lesson series for the **vibeacademy** channel teaching the
 software side of FTC robotics, from absolute beginner to competitive.
 
+> **Where lesson content lives (consolidated 2026-07-06):** everything for
+> lesson NN is on its own branch under `production/epNN/` — `SCRIPT.md`
+> (full shooting script), `PACKET.md` (lesson + media packet), `SOCIAL.md`
+> (YouTube/TikTok publish kit), thumbnail + assets, `ASSETS.md` (cue map) —
+> alongside the branch's code and learner-facing `LESSON.md`. This folder
+> on master keeps only series-wide docs: this plan/persona, the operator
+> runbook, and the visual prompt strategy.
+
 ## Positioning
 
 **"Software Robotics" — not robotics, not software.**

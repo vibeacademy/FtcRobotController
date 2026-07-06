@@ -5,7 +5,9 @@ robotics, taught from this repo. Each lesson has a video and a matching git
 branch frozen at the end-of-lesson code state. Start at Lesson 01; each
 branch's `LESSON.md` tells you what to read and links you forward.
 
-Series plan and per-lesson production packets: [`docs/lessons/`](docs/lessons/)
+Series plan and series-wide production docs: [`docs/lessons/`](docs/lessons/);
+each lesson's script, packet, social kit, and assets live on its own branch
+under `production/epNN/`
 
 | # | Lesson | Video | Code branch |
 |---|--------|-------|-------------|

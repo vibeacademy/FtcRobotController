@@ -23,6 +23,13 @@
 
 ## Starter Script
 
+> **Superseded for visuals.** The full shooting script
+> (`docs/lessons/scripts/lesson-09-full-script.md`) is the single source
+> of truth for every visual decision — prompts, `[Screen:]`/`[Edit:]`
+> reclassifications, `[Layout:]` cues, and `[Asset:]` paths. The cues
+> below are the original draft, kept for lineage; do not generate or
+> film from them.
+
 ### Prerequisites
 Arcs 1–2. The dashboard from lesson 08 (sensors join it).
 
@@ -145,6 +152,9 @@ https://github.com/vibeacademy/FtcRobotController/tree/lesson-09-sensors
 ticks to inches, FTC autonomous basics, robot feedback control, FTC gyro`
 
 ### Thumbnail concept
+
+> Current prompt lives in the full shooting script; the one below is the
+> original draft.
 Robot wearing a blindfold on the left; same robot with a glowing "eye"
 (compass/encoder icons) on the right; text "TAKE OFF THE BLINDFOLD."
 [Prompt: YouTube thumbnail 1280x720, split image same stylized robot, left

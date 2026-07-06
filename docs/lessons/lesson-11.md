@@ -22,6 +22,13 @@
 
 ## Starter Script
 
+> **Superseded for visuals.** The full shooting script
+> (`docs/lessons/scripts/lesson-11-full-script.md`) is the single source
+> of truth for every visual decision — prompts, `[Screen:]`/`[Edit:]`
+> reclassifications, `[Layout:]` cues, and `[Asset:]` paths. The cues
+> below are the original draft, kept for lineage; do not generate or
+> film from them.
+
 ### Prerequisites
 Lessons 09–10. Say plainly: no calculus, one multiplication.
 
@@ -160,6 +167,9 @@ FTC autonomous precision, control theory beginner, FTC encoder driving, FTC
 turn to heading`
 
 ### Thumbnail concept
+
+> Current prompt lives in the full shooting script; the one below is the
+> original draft.
 A robot gliding onto a target line with a shrinking power arrow; big
 equation "P = kP × error"; text "ONE LINE."
 [Prompt: YouTube thumbnail 1280x720, robot easing onto glowing target line

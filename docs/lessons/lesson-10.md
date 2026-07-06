@@ -24,6 +24,13 @@
 
 ## Starter Script
 
+> **Superseded for visuals.** The full shooting script
+> (`docs/lessons/scripts/lesson-10-full-script.md`) is the single source
+> of truth for every visual decision — prompts, `[Screen:]`/`[Edit:]`
+> reclassifications, `[Layout:]` cues, and `[Asset:]` paths. The cues
+> below are the original draft, kept for lineage; do not generate or
+> film from them.
+
 ### Prerequisites
 Lessons 01–09 (encoders are load-bearing here).
 
@@ -158,6 +165,9 @@ parking auto, opModeIsActive, FTC timeout, autonomous programming, FTC
 strategy points`
 
 ### Thumbnail concept
+
+> Current prompt lives in the full shooting script; the one below is the
+> original draft.
 Scoreboard showing 25 × 95% beating 40 × 30%; small robot parked neatly in a
 glowing zone; text "BORING WINS."
 [Prompt: YouTube thumbnail 1280x720, large scoreboard comparison 25pts 95%

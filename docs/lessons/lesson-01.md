@@ -26,6 +26,13 @@
 
 ## Starter Script
 
+> **Superseded for visuals.** The full shooting script
+> (`docs/lessons/scripts/lesson-01-full-script.md`) is the single source
+> of truth for every visual decision — prompts, `[Screen:]`/`[Edit:]`
+> reclassifications, `[Layout:]` cues, and `[Asset:]` paths. The cues
+> below are the original draft, kept for lineage; do not generate or
+> film from them.
+
 ### Prerequisites
 None. This is the front door.
 
@@ -159,6 +166,9 @@ beginners, java robotics, FTC OpMode, learn robotics, robotics for kids,
 FTC software, virtual robot`
 
 ### Thumbnail concept
+
+> Current prompt lives in the full shooting script; the one below is the
+> original draft.
 Split image: dead gray robot on the left, glowing robot with motion trail on
 the right; overlay text "200 LINES OF CODE" between them.
 [Prompt: YouTube thumbnail 1280x720, split composition, left half desaturated

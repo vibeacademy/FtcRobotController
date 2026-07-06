@@ -23,6 +23,13 @@
 
 ## Starter Script
 
+> **Superseded for visuals.** The full shooting script
+> (`docs/lessons/scripts/lesson-07-full-script.md`) is the single source
+> of truth for every visual decision — prompts, `[Screen:]`/`[Edit:]`
+> reclassifications, `[Layout:]` cues, and `[Asset:]` paths. The cues
+> below are the original draft, kept for lineage; do not generate or
+> film from them.
+
 ### Prerequisites
 Lessons 01–06.
 
@@ -154,6 +161,9 @@ https://github.com/vibeacademy/FtcRobotController/tree/lesson-07-testing
 gradle test, robot code quality, FTC software testing, FIRST Tech Challenge`
 
 ### Thumbnail concept
+
+> Current prompt lives in the full shooting script; the one below is the
+> original draft.
 A giant green checkmark shielding a small robot from a red "BUG" arrow;
 text "TESTED. NO ROBOT NEEDED."
 [Prompt: YouTube thumbnail 1280x720, large glowing green checkmark shield in

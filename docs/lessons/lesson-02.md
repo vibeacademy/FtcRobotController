@@ -22,6 +22,13 @@
 
 ## Starter Script
 
+> **Superseded for visuals.** The full shooting script
+> (`docs/lessons/scripts/lesson-02-full-script.md`) is the single source
+> of truth for every visual decision — prompts, `[Screen:]`/`[Edit:]`
+> reclassifications, `[Layout:]` cues, and `[Asset:]` paths. The cues
+> below are the original draft, kept for lineage; do not generate or
+> film from them.
+
 ### Prerequisites
 Lesson 01. A computer (Win/Mac/Linux, 8GB+ RAM).
 
@@ -146,6 +153,9 @@ Challenge programming, FTC TeamCode, gradle FTC, robot programming setup,
 FTC no robot, FTC beginner`
 
 ### Thumbnail concept
+
+> Current prompt lives in the full shooting script; the one below is the
+> original draft.
 Laptop with green BUILD SUCCESSFUL on screen; behind it, a ghosted/outlined
 robot with a "not required" stamp.
 [Prompt: YouTube thumbnail 1280x720, laptop front and center with green BUILD

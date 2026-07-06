@@ -24,6 +24,13 @@
 
 ## Starter Script
 
+> **Superseded for visuals.** The full shooting script
+> (`docs/lessons/scripts/lesson-12-full-script.md`) is the single source
+> of truth for every visual decision — prompts, `[Screen:]`/`[Edit:]`
+> reclassifications, `[Layout:]` cues, and `[Asset:]` paths. The cues
+> below are the original draft, kept for lineage; do not generate or
+> film from them.
+
 ### Prerequisites
 The series. A Control Hub if available — but the video works as a watch-along
 for hub-less viewers (that's most of them; say so warmly).
@@ -178,6 +185,9 @@ competition checklist, code freeze, FTC pit crew, FTC driver station
 config, FIRST Tech Challenge software`
 
 ### Thumbnail concept
+
+> Current prompt lives in the full shooting script; the one below is the
+> original draft.
 Closed laptop on a pit cart next to a competition-ready robot, big green
 checklist floating; text "THE CALM PIT."
 [Prompt: YouTube thumbnail 1280x720, closed laptop resting on pit cart

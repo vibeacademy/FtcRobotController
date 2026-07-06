@@ -22,6 +22,13 @@
 
 ## Starter Script
 
+> **Superseded for visuals.** The full shooting script
+> (`docs/lessons/scripts/lesson-05-full-script.md`) is the single source
+> of truth for every visual decision — prompts, `[Screen:]`/`[Edit:]`
+> reclassifications, `[Layout:]` cues, and `[Asset:]` paths. The cues
+> below are the original draft, kept for lineage; do not generate or
+> film from them.
+
 ### Prerequisites
 Arc 1. The sim from lesson 04 (all demos run in it).
 
@@ -150,6 +157,9 @@ https://github.com/vibeacademy/FtcRobotController/tree/lesson-05-mecanum
 math, FTC TeleOp tutorial, strafe FTC, motor power clamp, FTC java`
 
 ### Thumbnail concept
+
+> Current prompt lives in the full shooting script; the one below is the
+> original draft.
 Top-down robot with four 45° force arrows visibly combining into a big
 sideways arrow; text "THE MECANUM MATH."
 [Prompt: YouTube thumbnail 1280x720, top-down stylized robot with four

@@ -25,6 +25,13 @@
 
 ## Starter Script
 
+> **Superseded for visuals.** The full shooting script
+> (`docs/lessons/scripts/lesson-06-full-script.md`) is the single source
+> of truth for every visual decision — prompts, `[Screen:]`/`[Edit:]`
+> reclassifications, `[Layout:]` cues, and `[Asset:]` paths. The cues
+> below are the original draft, kept for lineage; do not generate or
+> film from them.
+
 ### Prerequisites
 Lessons 01–05. This is the series' first "architecture" lesson — flag it.
 
@@ -149,6 +156,9 @@ https://github.com/vibeacademy/FtcRobotController/tree/lesson-06-hardware-abstra
 RobotHardware, FTC team programming, mock hardware, FTC software design`
 
 ### Thumbnail concept
+
+> Current prompt lives in the full shooting script; the one below is the
+> original draft.
 One glowing code file with three cables out to a robot, a sim window, and a
 laptop; text "1 FILE. 3 ROBOTS."
 [Prompt: YouTube thumbnail 1280x720, central glowing code file icon with

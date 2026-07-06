@@ -119,7 +119,7 @@ it, in one PR pair:
    cue number in script order. Add/update the folder's `ASSETS.md` cue
    map. Cue numbers are reserved even for non-generated visuals, so the
    folder reads in script order with intentional gaps.
-3. **Back-edit the script on master, same pass:** every `[Prompt:]` /
+3. **Back-edit the script on the lesson branch (`production/epNN/SCRIPT.md`), same pass:** every `[Prompt:]` /
    `[Video Prompt:]` carries the text that actually produced (or will
    reproduce) the final, followed by an `[Asset: production/epNN/…]` line;
    any visual reclassified during review (Rule 3 code/UI cases) is flipped

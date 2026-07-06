@@ -200,9 +200,12 @@ the risky subsystem... send them that one. See you there.
 One glowing code file with three cables out to a robot, a sim window, and a
 laptop; text "1 FILE. 3 ROBOTS."
 [Prompt: YouTube thumbnail 1280x720, central glowing code file icon with
-three thick cables to robot photo, simulator screen, laptop with green
-checks, bold white text 1 FILE 3 ROBOTS, dark background, high contrast
-architecture style]
+three thick cables running to a photo-real small cube-shaped student
+competition robot built from silver aluminum extrusion rails with mecanum
+wheels, a robot simulator screen, and a laptop with green checkmarks, bold
+white text "1 FILE 3 ROBOTS", dark background, high contrast architecture
+style, not humanoid, no legs, no sci-fi armor]
+[Asset: production/ep06/E06-thumbnail.png]
 
 ---
 

@@ -213,10 +213,11 @@ you there.
 
 Scoreboard showing 25 × 95% beating 40 × 30%; small robot parked neatly in
 a glowing zone; text "BORING WINS."
-[Prompt: YouTube thumbnail 1280x720, large scoreboard comparison 25pts 95%
-in green beating 40pts 30% in red, small robot parked in glowing blue zone
-below, bold white text BORING WINS, dark background sports broadcast
-energy]
+[Prompt: YouTube thumbnail 1280x720, large scoreboard comparison "25pts
+95%" in green beating "40pts 30%" in red, small boxy wheeled competition
+robot parked in glowing blue zone below, bold white text "BORING WINS",
+dark background sports broadcast energy, not humanoid, no legs]
+[Asset: production/ep10/E10-thumbnail.png]
 
 ---
 

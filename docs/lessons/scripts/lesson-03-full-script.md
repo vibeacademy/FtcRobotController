@@ -211,8 +211,9 @@ A hand on a game controller in the foreground, telemetry numbers reacting
 on a laptop behind; text "YOUR FIRST ROBOT PROGRAM."
 [Prompt: YouTube thumbnail 1280x720, foreground hands on game controller
 with tilted stick, laptop screen behind showing large telemetry number
-mid-change, bold white text YOUR FIRST ROBOT PROGRAM, dark background blue
+mid-change, bold white text "YOUR FIRST ROBOT PROGRAM", dark background blue
 accent lighting, energetic youth tech style]
+[Asset: production/ep03/E03-thumbnail.png]
 
 ---
 

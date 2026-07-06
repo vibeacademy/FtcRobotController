@@ -196,8 +196,9 @@ Gamepad in the foreground wired (glowing cable) into a laptop showing the
 top-down sim field; text "NO ROBOT. STILL DRIVING."
 [Prompt: YouTube thumbnail 1280x720, game controller foreground with
 glowing blue cable arcing into laptop screen showing top-down robot field
-simulator, bold white text NO ROBOT STILL DRIVING, dark background, high
+simulator, bold white text "NO ROBOT STILL DRIVING", dark background, high
 energy youth tech style]
+[Asset: production/ep04/E04-thumbnail.png]
 
 ---
 

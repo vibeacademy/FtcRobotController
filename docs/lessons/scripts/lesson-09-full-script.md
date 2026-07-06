@@ -191,10 +191,12 @@ doesn't count. See you there.
 
 Robot wearing a blindfold on the left; same robot with a glowing "eye"
 (compass/encoder icons) on the right; text "TAKE OFF THE BLINDFOLD."
-[Prompt: YouTube thumbnail 1280x720, split image same stylized robot, left
-wearing gray blindfold veering off course, right with glowing blue sensor
-eye and compass icons driving true, bold white text TAKE OFF THE
-BLINDFOLD, dark background high contrast]
+[Prompt: YouTube thumbnail 1280x720, split image of the same boxy wheeled
+competition robot, left side wearing gray blindfold veering off course,
+right side with glowing blue sensor eye and compass icons driving true,
+bold white text "TAKE OFF THE BLINDFOLD", dark background high contrast,
+not humanoid, no legs]
+[Asset: production/ep09/E09-thumbnail.png]
 
 ---
 

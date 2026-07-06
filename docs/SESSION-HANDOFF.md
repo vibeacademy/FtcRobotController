@@ -1,9 +1,9 @@
 # Session Handoff — read this first on the new machine
 
-Written 2026-07-05 at the end of a long working session, for the next
-Claude session (and the human operator) picking this project up on a
-different computer. Everything of value is committed to this repo or
-pushed to a remote; this file is the map.
+Written 2026-07-05 at the end of a long working session; updated later
+the same day after the first session on the new machine (PRs #30–#33).
+Everything of value is committed to this repo or pushed to a remote;
+this file is the map.
 
 ## What this project is
 
@@ -38,21 +38,32 @@ vibeacademy channel. GembaFlow agent workflow (agents + commands in
   (LEGAL/LICENSE.txt — GitHub doesn't detect it). Full lesson codebase
   compiles against it; all five drivable OpModes runtime-verified with a
   gamepad. Upgrade policy in the runbook.
-- **Lesson 01 visual assets generated** (~$0.35, 7 of 8 stills
-  camera-ready): `content-marketing/videos/ftc-software-robotics-ep01/`
-  (`assets/` = v1, `assets-v2/` = the four regenerations). Committed on
-  content-marketing branch `feat/openclaw-skills`.
+- **Lesson 01 production assets, promoted** (PRs #30/#32): finals live at
+  `production/ep01/` ON THE `lesson-01-hello-robot` BRANCH, named
+  `E01-CC-slug.ext` by script cue, with an `ASSETS.md` cue map. 6 stills ✅;
+  E01-04 (control-loop clip) + E01-06/07 (code overlays) are edit-time
+  builds. content-marketing's ep01 dirs are workshop scratch/archive only.
+- **Asset pass SOP** (PR #31): generation isn't done until the script is
+  back-edited in lockstep — `[Asset:]` refs, final prompt text, Rule-3
+  flips. Lives in `docs/lessons/OPERATOR-RUNBOOK.md` "Asset pass SOP".
+- **Reclassification pass, all 12 scripts — DONE** (PRs #31/#33): every
+  code/UI/terminal/telemetry cue is `[Screen:]`+`[Edit:]`; text-heavy
+  cards are editor slides; order-bearing motion is editor-built; and new
+  **Rule 6 (capture-first)** in `VISUAL-PROMPT-STRATEGY.md`: never
+  generate what the series can record for real (sim, terminals, DS,
+  telemetry). One generated video clip remains series-wide (L05 wheel
+  close-up).
+- **Veo loop clip — RESOLVED**: regenerated once with explicit direction
+  (~$0.15), still wrong (causal order reversed, double-headed arrows,
+  garbled timer; reject archived in content-marketing `assets-v3/`).
+  Reclassified: E01-04 is an editor-built motion graphic per the script's
+  `[Edit:]` spec. Do not spend more on Veo for it.
 
 ## Open items (check `gh pr list` — states may have moved)
 
-- **PR #28**: visual prompt strategy doc — merge it.
-- **This handoff PR**: also carries the previously-untracked GembaFlow
-  files (agents, remaining commands, CLAUDE.md, .mcp.json, docs/, ADR,
-  HelloWorld.java on master) that existed only on the old machine.
-- **Veo loop clip** (lesson 01, asset 004): conceptually right, flow
-  direction muddled — review in motion before re-spending ~$0.15.
-  Motion-prompt fix: state flow direction explicitly ("pulse travels
-  clockwise: gamepad → chip → motors → gamepad").
+- None in this repo as of the update — PRs #28–#33 all merged. The
+  content-marketing branch `feat/openclaw-skills` still holds the ep01
+  workshop archive uncommitted-to-main; fine to leave.
 
 ## New machine setup checklist
 
@@ -62,6 +73,10 @@ vibeacademy channel. GembaFlow agent workflow (agents + commands in
    (reviewer), tck517. `gh repo set-default vibeacademy/FtcRobotController`
    in the repo (prevents gh resolving the upstream FIRST repo — this bit
    us).
+   **Also git identity** (bit us on the new machine — first commit went
+   out under the local hostname): `git config user.name "VA Worker" &&
+   git config user.email va-worker@users.noreply.github.com` in each
+   working repo.
 3. **Android builds**: create `local.properties` with
    `sdk.dir=<path to Android SDK>` (never commit it). Verify:
    `./gradlew :TeamCode:testDebugUnitTest` → 18 green.
@@ -102,16 +117,23 @@ vibeacademy channel. GembaFlow agent workflow (agents + commands in
 
 ## Where the work continues (in order)
 
-1. Merge PR #28 + this handoff PR.
-2. Runbook Phase 0 leftovers (all human): recording rig + one test clip;
-   YouTube playlist; lesson 01 publish date.
-3. Reclassification pass on scripts 02–12 per
-   `VISUAL-PROMPT-STRATEGY.md` (code-ish visuals → `[Screen:]` overlays)
-   — one editing session, delegable.
-4. Film lesson 01 (script: `docs/lessons/scripts/lesson-01-full-script.md`,
-   assets ready, shot list at the script's bottom).
-5. Per-lesson pipeline per the runbook: publish → pinned comment →
-   backfill video URL into `LESSONS.md` + branch `LESSON.md`.
+1. ~~Merge PRs~~ — #28–#33 all merged 2026-07-05.
+2. ~~Reclassification pass on scripts 02–12~~ — done (PR #33).
+3. **Machine setup this laptop still lacks** (checked 2026-07-05, blocks
+   lesson 01's IDE + Driver-Station shots): no Android SDK /
+   Android Studio / `local.properties` (→ 18-test verify not run here),
+   no sim fork clone, no JavaFX-bundled JDK / IntelliJ. Checklist items
+   1, 3, 4 above. Asset-gen venv was session-scratch — recreate per item
+   6 when next generating.
+4. Runbook Phase 0 leftovers (all human): recording rig + one test clip;
+   YouTube playlist; lesson 01 publish date (publish-blocking, not
+   record-blocking).
+5. Film lesson 01 (script: `docs/lessons/scripts/lesson-01-full-script.md`,
+   6 stills committed at `production/ep01/` on the lesson branch, shot
+   list at the script's bottom; E01-04/06/07 are edit-time builds).
+6. Per-lesson pipeline per the runbook: asset pass (SOP!) → record →
+   edit → publish → pinned comment → backfill video URL into
+   `LESSONS.md` + branch `LESSON.md`.
 
 ## Repo conventions the next session must respect
 

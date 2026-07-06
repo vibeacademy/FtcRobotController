@@ -2,7 +2,7 @@
 
 Camera-ready assets for lesson 01 ("Robot Code Isn't What You Think").
 One file per visual cue in the shooting script
-(`docs/lessons/scripts/lesson-01-full-script.md` on master); the script's
+(`SCRIPT.md` in this folder); the script's
 `[Asset:]` lines point here. Naming: `E{episode}-{cue}-{slug}.{ext}` —
 cue numbers follow script order, so gaps below are intentional.
 

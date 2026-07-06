@@ -7,7 +7,8 @@
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
 `[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record it
-· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic)
+· `[Layout:]` = Descript scene layout (default pack names) — no cue = **Camera**.
 
 **Filming note:** the run demos (loop counter, stick values) happen on YOUR
 screen via the simulator — viewers don't have it until lesson 04, and the
@@ -34,6 +35,7 @@ Lessons 01–02 (the mental model + a machine that builds).
 
 ## Hook (0:00–0:35)
 
+[Layout: Screen — 2-up as layers: editor + DS list]
 [Visual: Empty Java file on the left; on the right, a Driver Station phone
 showing a menu with "MyFirstOpMode" in the list next to real competition
 programs.]
@@ -76,6 +78,7 @@ name, My First OpMode. Say it with me: this is the menu registration. No
 annotation, no menu entry, your program effectively doesn't exist. This
 one line is the difference between a Java file and a robot program.
 
+[Layout: Screen — callout arrows as Descript layers]
 [Visual: The OpMode skeleton with two callouts — @TeleOp arrow to a phone
 menu entry, runOpMode arrow to a "the SDK calls this" label]
 [Screen: the real OpMode skeleton in the IDE, plus the DS menu capture
@@ -104,6 +107,7 @@ start — and waitForStart releases. Everything below that line IS the match.
 in code. When you see it, read it as: "above me is the pits, below me is
 the game."
 
+[Layout: Screen — tint overlays as Descript layers]
 [Visual: Vertical code file split by the waitForStart line into a blue INIT
 zone ("robot must not move") and green MATCH zone ("loop runs here")]
 [Screen: MyFirstOpMode.java zoomed out with waitForStart() centered]
@@ -156,6 +160,7 @@ every single FTC programmer gets bitten by this exactly once, ships a
 robot that drives backwards, and never forgets again. You just got your
 bite for free.
 
+[Layout: Screen — one live recording, code + telemetry visible]
 [Visual: Split — code loop on left; telemetry panel on right where stick
 value changes as an on-screen gamepad stick wiggles]
 [Screen: real recording — the loop code on the left half, live telemetry
@@ -170,6 +175,7 @@ order-bearing motion)]
 
 ## The 4 Mistakes Everyone Makes (9:00–10:15)
 
+[Layout: List — type the four gotchas natively]
 [Visual: Checklist card with four items, each with a small red-X icon]
 [Edit: build the four-gotcha card as a slide — four numbered rows, red X
 icons, the exact labels from the narration. DO NOT generate — text that is

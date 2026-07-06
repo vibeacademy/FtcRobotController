@@ -8,7 +8,8 @@ sign flipped, marked in source for post-diagnosis checking).
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
 `[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record
-· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic)
+· `[Layout:]` = Descript scene layout (default pack names) — no cue = **Camera**.
 
 **Filming note:** the diagnosis (7:30) must be played STRAIGHT — run the
 buggy OpMode as if you don't know the answer, read the zones top to bottom,
@@ -34,6 +35,7 @@ Lessons 01–07 — the dashboard displays the lesson-05/06 pipeline.
 
 ## Hook (0:00–0:40)
 
+[Layout: Screen — sim window with field + telemetry both visible]
 [Visual: A robot in sim drives in a slow circle instead of straight. Driver
 looks confused. Cut to the telemetry panel: one number is obviously wrong —
 right stick reads 0.13 with hands off the controller.]
@@ -64,6 +66,7 @@ screen repaints instead of scrolling. It was never a chat log. It's an
 instrument panel. So stop sprinkling debug prints and START designing a
 panel.
 
+[Layout: Screen — zone labels as Descript layers]
 [Visual: Telemetry screen mock split into three labeled zones — INPUTS /
 DECISIONS / OUTPUTS — mirroring the loop diagram from lesson 01]
 [Screen: the real three-zone dashboard this episode builds, live on the
@@ -104,6 +107,7 @@ stick row; sim telemetry updating alongside]
 header — INPUTS — and under it, one row with all three stick intents.
 Run... there's zone one, tracking my thumbs in real time.
 
+[Layout: Screen — one live recording, editor + telemetry]
 [Visual: Code on left adding addData rows; live telemetry on right growing
 into the three-zone dashboard as each line lands]
 [Screen: real recording — editor left, live telemetry right; type each
@@ -148,6 +152,7 @@ point-eight, back-left... POSITIVE point-eight? That wheel's sign is
 WRONG. Found it. Question two caught it — it's in OUR math, and I never
 even suspected the hardware.
 
+[Layout: List — the four questions typed natively]
 [Visual: The 4 questions as a vertical checklist; a glowing marker
 descends and stops at question 2, arrow to the flipped sign in code]
 [Screen: the buggy line in the IDE — the wrong minus sign]

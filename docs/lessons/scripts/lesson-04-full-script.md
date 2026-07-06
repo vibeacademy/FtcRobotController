@@ -7,7 +7,8 @@ drive) and the LESSON.md with sim setup + the JavaFX full-JDK gotcha.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
 `[Video Prompt:]` = generated motion (1 used) · `[Screen:]` = you record
-· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic)
+· `[Layout:]` = Descript scene layout (default pack names) — no cue = **Camera**.
 
 **Filming notes:** clone the PINNED fork (`vibeacademy/virtual_robot`) on
 camera — that's the link viewers get. Credit Beta8397 verbally where marked.
@@ -34,6 +35,7 @@ Lessons 01–03. About 30 minutes.
 
 ## Hook (0:00–0:35)
 
+[Layout: Media — full-bleed generated clip]
 [Visual: A gamepad in hands; camera pulls back — the robot being driven is
 on a laptop screen, a top-down FTC field with a robot smoothly strafing.]
 [Video Prompt: Camera slowly pulls back from close-up of hands on game
@@ -83,6 +85,7 @@ builders need it too. The simulator is yours twenty-four seven. Starting
 today, the software people can out-practice everyone in the building. This
 isn't the toy version of robotics. This is how the pros do it.
 
+[Layout: Media]
 [Visual: Two clocks — "robot time: 4 hrs/week" small and red-limited,
 "sim time: unlimited" large and glowing]
 [Prompt: Two stopwatch icons dark background, small red-tinted clock
@@ -143,6 +146,7 @@ The code can't tell who answered. Which means the code you write and test
 here, all season, deploys to metal unchanged. Same names. Same code. Two
 worlds.
 
+[Layout: Media — exported collage]
 [Visual: Same OpMode file shown center, arrows out to a simulator window
 on one side and a photo-real robot on the other, "same names, same code"
 label]

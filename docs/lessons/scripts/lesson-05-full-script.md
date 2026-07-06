@@ -7,7 +7,8 @@ mixing table lives in its header comment. Both video-prompt slots used.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
 `[Video Prompt:]` = generated motion (1 used) · `[Screen:]` = you record
-· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic)
+· `[Layout:]` = Descript scene layout (default pack names) — no cue = **Camera**.
 
 **Filming note:** the clipped-vs-normalized comparison (8:00) is the money
 demo. Record it in the sim by literally commenting out the normalize block,
@@ -34,6 +35,7 @@ Arc 1 — you can write an OpMode and drive it in the sim.
 
 ## Hook (0:00–0:40)
 
+[Layout: Screen — sim capture full-bleed; switch to Media for the wheel clip]
 [Visual: Sim robot drives a perfect diagonal while spinning slowly —
 impossible for a car — then a real mecanum wheel close-up with its angled
 rollers.]
@@ -51,6 +53,8 @@ with the angled rollers — and half software: about fifteen lines of math
 that every competitive FTC team on the planet has some version of. Today
 you write those fifteen lines and actually understand them. And I'll show
 you the one-line mistake hiding in this code that flips real robots.
+
+[Layout: Big Fact — "15 LINES" punches in as the hook lands]
 
 [~40 seconds]
 
@@ -72,6 +76,7 @@ diagonal parts cancel, robot drives straight. Spin them in the right
 combination and the FORWARD parts cancel instead — all that's left is
 sideways. The robot strafes. No steering, no turning. Pure slide.
 
+[Layout: Media]
 [Visual: Top-down robot diagram, four force arrows at 45° from each wheel;
 arrows combine into one big sideways arrow as the "strafe" case]
 [Prompt: Top-down schematic of square robot dark background, four diagonal
@@ -96,6 +101,7 @@ and down: drive. Left stick side to side: strafe. Right stick side to
 side: turn. Three numbers, each between negative one and one. Our job:
 turn three intentions into four wheel powers.
 
+[Layout: List — the sign table typed natively, code capture as a layer]
 [Visual: 4×3 color grid — rows are wheels, columns are drive/strafe/turn,
 each cell + or −, matching colored signs in the code beside it]
 [Screen: the real mecanum mixing code in the IDE]
@@ -151,6 +157,7 @@ destroyed. The robot lurches, curves off course, and at full speed with a
 tall robot? It tips. Nobody handles it for you. On a robot, YOUR code is
 the engine.
 
+[Layout: Media — 2-up composite of the two runs]
 [Visual: Two sim runs side by side — "clipped" robot curving off path,
 "normalized" robot driving true, both from same stick input]
 [Screen: two real sim runs from the same stick input — one on the

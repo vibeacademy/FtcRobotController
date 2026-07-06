@@ -208,9 +208,12 @@ exactly where. Telemetry, done properly. See you there.
 A giant green checkmark shielding a small robot from a red "BUG" arrow;
 text "TESTED. NO ROBOT NEEDED."
 [Prompt: YouTube thumbnail 1280x720, large glowing green checkmark shield
-in front of small robot, red jagged arrow labeled BUG deflecting off
-shield, bold white text TESTED NO ROBOT NEEDED, dark background, high
-contrast protective energy]
+protecting a small cube-shaped student competition robot built from silver
+aluminum extrusion rails with four mecanum wheels, a red jagged lightning
+bolt deflecting off the shield, bold white text "TESTED NO ROBOT NEEDED"
+at the top, absolutely no other text anywhere, dark background, high
+contrast protective energy, not humanoid, no legs, no sci-fi armor]
+[Asset: production/ep07/E07-thumbnail.png]
 
 ---
 

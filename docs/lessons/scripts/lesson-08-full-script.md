@@ -195,10 +195,14 @@ software that wins matches. See you there.
 
 Robot with a visible "thought bubble" that is a telemetry panel, one row
 glowing red; text "SEE WHAT IT THINKS."
-[Prompt: YouTube thumbnail 1280x720, stylized robot with large thought
-bubble containing telemetry dashboard rows, one row glowing red among
-green, bold white text SEE WHAT IT THINKS, dark background, playful
-detective tech style]
+[Prompt: YouTube thumbnail 1280x720, small cube-shaped student competition
+robot built from silver aluminum extrusion rails with four mecanum wheels
+and visible colorful wiring, large thought bubble above it containing
+abstract glowing dashboard rows where one row glows red among green rows,
+no readable text inside the bubble, bold white text "SEE WHAT IT THINKS"
+at the bottom, dark background, playful detective tech style, not
+humanoid, no legs, no tank treads, no face]
+[Asset: production/ep08/E08-thumbnail.png]
 
 ---
 

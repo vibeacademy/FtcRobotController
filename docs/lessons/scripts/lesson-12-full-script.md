@@ -252,10 +252,14 @@ everyone else keeping up with you. Go build. 🎓
 
 Closed laptop on a pit cart next to a competition-ready robot, big green
 checklist floating; text "THE CALM PIT."
-[Prompt: YouTube thumbnail 1280x720, closed laptop resting on pit cart
-beside polished competition robot, large floating checklist with all green
-checks, bold white text THE CALM PIT, warm confident lighting on dark
-background, graduation energy]
+[Prompt: YouTube thumbnail 1280x720, closed laptop resting on competition
+pit cart beside a polished small cube-shaped student competition robot
+built from silver aluminum extrusion rails with mecanum wheels and tidy
+wiring, floating checklist panel showing five green checkmarks only with
+absolutely no words on the checklist, bold white text "THE CALM PIT" at
+the top, warm confident lighting on dark background, graduation energy,
+not humanoid, no legs, no sci-fi armor]
+[Asset: production/ep12/E12-thumbnail.png]
 
 ---
 

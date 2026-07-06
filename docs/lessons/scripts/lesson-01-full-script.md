@@ -10,7 +10,8 @@ the walkthrough matches that branch's `HelloWorld.java` exactly.
 (IDE/browser capture, no generation). `[Edit: …]` = composite you build in
 the editor over real captures. `[Asset: …]` = the finished file — all
 finals live in `production/ep01/` **on the `lesson-01-hello-robot` branch**
-(see its `ASSETS.md` for the full cue map).
+(see its `ASSETS.md` for the full cue map). `[Layout: …]` = Descript scene
+layout (default pack names); any beat without one is **Camera**.
 
 ---
 
@@ -29,6 +30,7 @@ None. This is the front door of the series.
 
 ## Hook (0:00–0:40)
 
+[Layout: Media — full-bleed still, E01-01]
 [Visual: Two FTC robots side by side at a match start. Left robot sits dead
 during autonomous. Right robot drives off, scores, parks. Scoreboard ticks up
 only on the right.]
@@ -58,6 +60,7 @@ it. Let's go.
 
 ## What FTC Is, in 90 Seconds (0:40–2:10)
 
+[Layout: Media — E01-02]
 [Visual: Match timeline bar — AUTO 0:30 glowing (100% software), TELEOP
 2:00, ENDGAME 0:30 — robot icon above the AUTO segment]
 [Prompt: Minimal flat infographic on a plain dark background, one single
@@ -81,6 +84,7 @@ game — except good code is quietly helping the driver the whole time. And
 phase three, endgame: special scoring in the final thirty seconds, usually
 worth a lot.
 
+[Layout: Media — E01-03]
 [Visual: Three subsystem icons — CAD wrench (build), battery/wires
 (hardware), code brackets (software) — with the code icon glowing and a
 price tag reading "$0"]
@@ -112,6 +116,7 @@ program is a loop, and it runs about fifty times every single second: read
 the controllers, decide what to do, command the motors. Then again. And
 again. Fifty times a second, until the match ends.
 
+[Layout: Media — E01-04 motion graphic]
 [Visual: Animated loop — gamepad icon → "decide" brain node → motor icons →
 back to gamepad, cycling continuously with a 20ms timer]
 [Edit: build this as a motion graphic in the editor — three nodes in a
@@ -135,6 +140,7 @@ and then... physics gets a vote. The battery is sagging. The wheel is
 slipping on a scuffed tile. Another robot is pushing back. Your code just
 votes on what should happen. Physics decides what actually does.
 
+[Layout: Media — E01-05]
 [Visual: Split image — left: game character mid-jump with "ENGINE
 GUARANTEES IT" label; right: robot wheel slipping on field tile with
 physics force arrows and "PHYSICS VOTES" label]
@@ -143,6 +149,8 @@ jumping with clean green trajectory arc labeled engine guarantees it, right
 side realistic robot wheel on gray foam tile with red slip arrows and
 friction symbols labeled physics votes, contrast illustration style]
 [Asset: production/ep01/E01-05-engine-vs-physics.png]
+
+[Layout: Quote — card text: "The loop asks. You answer. Physics decides."]
 
 (Audio) That's mental model number one, and honestly, half of robot
 programming is just respecting it. The loop asks, you answer, physics
@@ -153,6 +161,7 @@ real code, and you're going to see the loop sitting right there.
 
 ## Reading Real Robot Code (4:30–7:30)
 
+[Layout: Screen — browser, camera bubble on]
 [Screen: Browser — the pinned-comment link opening
 github.com/vibeacademy/FtcRobotController/tree/lesson-01-hello-robot, then
 navigating to TeamCode/src/main/java/org/firstinspires/ftc/teamcode/HelloWorld.java]
@@ -163,6 +172,7 @@ opening one file: HelloWorld dot java. And I'll be straight with you: the
 first time you see this file, it looks like a lot. Let's make it look like
 a little.
 
+[Layout: Screen]
 [Screen: HelloWorld.java top — the 28-line FIRST copyright comment block,
 then scrolling to the imports]
 
@@ -172,6 +182,7 @@ never write one, you get to scroll straight past it. Same with these
 "import" lines — that's Java pulling in the tools this file uses. Skim,
 don't study.
 
+[Layout: Screen]
 [Screen: The @TeleOp annotation line and class declaration, highlighted]
 
 (Audio) Now the real stuff, and there are only three things you need to
@@ -183,6 +194,7 @@ program gets ON that menu. A program is called an OpMode in FTC — literally
 "operation mode" — and a team ships dozens of them. This annotation is your
 program's name tag.
 
+[Layout: Media — E01-06 composite]
 [Visual: Overlay diagram — the @TeleOp code line with an arrow to the real
 Driver Station menu where "Hello World Op Mode" is highlighted]
 [Screen: two captures — close-up of the @TeleOp line in the IDE, and the
@@ -192,6 +204,7 @@ the annotation line to the highlighted menu entry. DO NOT generate this —
 models invent fake code and garble UI text (VISUAL-PROMPT-STRATEGY Rule 3).
 Export the finished composite as production/ep01/E01-06-teleop-menu-overlay.png]
 
+[Layout: Screen]
 [Screen: waitForStart() line, highlighted, with the code above it tinted
 blue and the code below tinted green]
 
@@ -204,6 +217,7 @@ referee says go, the driver presses start — and everything BELOW this line
 is the actual match. One line of code, and it's literally where the match
 begins.
 
+[Layout: Screen]
 [Screen: The while(opModeIsActive()) block, highlighted; slow zoom]
 
 (Audio) And thing three — there it is. "While opModeIsActive." That's the
@@ -218,6 +232,7 @@ second. And these "Log" lines — that's the robot writing notes to a logbook
 you can read after the fact. Live dashboard, and a diary. We'll use both
 for real in later lessons.
 
+[Layout: Media — E01-07 composite]
 [Visual: HelloWorld.java shrunk to fit one screen with three regions
 color-boxed — INIT (blue), THE LOOP (green), TELEMETRY (yellow) — loop
 diagram inset in corner]
@@ -239,6 +254,7 @@ shape. You just read real robot code.
 
 ## Why Software Wins (7:30–8:30)
 
+[Layout: Media — E01-08]
 [Visual: Scoreboard-style graphic with three stacked claims — "AUTO: 25+
 pts, software alone" / "DRIVER ASSIST: average driver → good driver" /
 "RELIABILITY: scores in round 6, not just round 1" — each with a point icon]
@@ -268,6 +284,7 @@ ship. It just takes someone who decided to learn it. That's you, now.
 
 ## Conclusion + Homework (8:30–9:00)
 
+[Layout: Screen]
 [Screen: The lesson-01 branch page on GitHub, cursor hovering LESSON.md]
 
 (Audio) Here's your homework, and it's genuinely ten minutes. The link in

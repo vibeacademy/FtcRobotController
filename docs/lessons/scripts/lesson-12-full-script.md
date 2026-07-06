@@ -9,7 +9,8 @@ LESSON.md as the graduation page.
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
 `[Video Prompt:]` = generated motion (0 used — this episode is real
 hardware footage) · `[Screen/Camera:]` = you record
-· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic)
+· `[Layout:]` = Descript scene layout (default pack names) — no cue = **Camera**.
 
 **Filming notes:** this is the one episode with a HARDWARE dependency — a
 Control Hub, a Driver Station device, and ideally a rolling chassis. Say
@@ -38,6 +39,7 @@ you don't (said on camera, warmly, in the first minute).
 
 ## Hook (0:00–0:45)
 
+[Layout: Media — full-bleed still]
 [Visual: A pit at a real competition. One team frantically typing, cable
 spaghetti, panicked faces, 4 minutes to match. Neighboring pit: laptop
 closed, robot on cart, checklist on clipboard, kids relaxed.]
@@ -88,6 +90,7 @@ that exact name to a physical port — motor zero, this wire, THIS motor.
 One screen. Every name our code asks for, meeting real copper, exactly
 once.
 
+[Layout: Media — exported collage]
 [Visual: Driver Station config screen; each name line connects by a drawn
 wire to a motor port on a hub photo; one name glowing as it's typed to
 match the code's constant]
@@ -147,6 +150,7 @@ numbers. No more week-long arguments. And when your robot exists: re-run
 the five-for-five drill on real carpet. The generous margins from lesson
 ten were built for exactly this gap.
 
+[Layout: Media — 2-up composite]
 [Visual: Same ParkAuto telemetry side by side — sim run vs field run —
 values slightly different, both parking; a battery voltage readout sagging]
 [Screen: two real ParkAuto telemetry captures — one from the sim, one
@@ -190,6 +194,7 @@ job: run the checklist, read the numbers, protect the freeze. And here's
 the thing nobody puts on a checklist: staying calm IS the job. Your team
 can feel it. Be the closed laptop.
 
+[Layout: Media — rendered from the real printable]
 [Visual: The printable checklist, checkmarks landing one by one; a red
 "CODE FREEZE" banner with a date and a padlock over the repo]
 [Edit: build from the episode's REAL printable checklist
@@ -203,6 +208,7 @@ match the printable]
 
 ## Graduation (11:00–13:00)
 
+[Layout: Media — designed slide]
 [Visual: The 12 lesson branches as a subway-map line, each stop lit, from
 "hello-robot" to "competition-ops"]
 [Edit: build the subway map as a slide — one line, twelve stations

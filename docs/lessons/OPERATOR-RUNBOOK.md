@@ -47,11 +47,12 @@ In order:
    the fork on a branch, rebase the shims, re-run this verification, then
    (and only then) fast-forward the fork's master and update the pin SHA
    here and in lesson-04's LESSON.md.
-3. **[YOU] Recording setup, once:** screen-capture tool (OBS is fine), a
-   decent mic, a gamepad, and one test recording of you driving the sim
-   while narrating. This test clip is your edit-workflow shakedown — do it
-   before scripting so you learn what your future self needs from a script
-   (pause points, on-screen beats). ~1–2 hrs.
+3. **[YOU] Recording setup, once:** the operator records and edits in
+   **Descript** (camera + screen + VO + scene layouts in one tool), plus a
+   decent mic and a gamepad. Make one test recording of driving the sim
+   while narrating — the edit-workflow shakedown; do it before filming so
+   you learn what your future self needs from a script (pause points,
+   on-screen beats, layout switches). ~1–2 hrs.
 4. **[YOU] Channel prep:** create the "Software Robotics" playlist, decide
    publish cadence (recommended: 2/week July–August so Arc 1 is live before
    September kickoff), and pick lesson 01's target publish date. Everything
@@ -74,7 +75,7 @@ execution order; the human-only steps are the schedule's critical path.
 | 3 | **Video visuals** — the ≤2 `[Video Prompt:]` clips per script | [AGENT] generates, **[YOU] curate** | Same as above — SOP applies |
 | 4 | **Screen recordings** — IDE typing, sim driving, terminal runs, telemetry panels | **[YOU]** | The code is already on the lesson's branch — check it out, follow the script's Implementation beats. Record MORE than you need; b-roll of the sim driving is reusable across lessons. ~1–2 hrs |
 | 5 | **Voiceover / on-camera** — record the (Audio) track | **[YOU]** | Nobody else has your voice. Batch-record 2–3 lessons per session once warmed up. ~30–60 min per lesson |
-| 6 | **Edit** — assemble VO + screen captures + generated visuals per the script's timeline | **[YOU]** (or an editor you brief with the script) | The script's `[Visual:]` cues + timestamps ARE the edit decision list. ~2–4 hrs; the biggest time sink |
+| 6 | **Edit** — assemble VO + screen captures + generated visuals per the script's timeline | **[YOU]** (or an editor you brief with the script) | The script's `[Visual:]` cues + timestamps ARE the edit decision list, and each `[Layout:]` cue names the Descript scene layout to apply (conventions below). ~2–4 hrs; the biggest time sink |
 | 7 | **Thumbnail** — generate from the full script's thumbnail prompt (the packet's copy is the superseded draft), pick/tweak | [AGENT] generates, **[YOU] pick** | ~15 min human |
 | 8 | **Metadata** — title, description, tags, chapters | [AGENT] final-checks against the edit (chapter timestamps shift!), **[YOU] paste** | Packet has it all drafted; only the chapter times need syncing to the real cut |
 | 9 | **Upload + publish** — schedule on YouTube, add to playlist | **[YOU]** | Account access = you. Schedule, don't insta-publish; it enables step 10 prep |
@@ -82,6 +83,25 @@ execution order; the human-only steps are the schedule's critical path.
 | 11 | **Link backfill** — video URL into `LESSONS.md` (master), the branch's `LESSON.md`, and the previous lesson's "next" pointer if you're adding video links there | [AGENT] | One commit per publish; delegable entirely |
 | 12 | **Distribution** — X thread / shorts / community post per content-marketing conventions | [AGENT] drafts, **[YOU] post** | Optional per lesson; at minimum do lessons 01, 04 (arc payoff), 07, 12 |
 | 13 | **Engagement** — reply to comments, especially error-message help on 02 and challenge submissions on 05/08/10 | **[YOU]** | The packets *promise* this ("post your error, I read everything"). Budget 20 min/day the first week after each publish. This is where authority actually accrues |
+
+### Descript layout conventions
+
+Every visual cue in the scripts carries a `[Layout:]` line naming the
+Descript scene layout (default layout pack vocabulary — survives a
+Change-Layout-Pack re-skin). The operator is on camera throughout, so:
+
+| `[Layout:]` | Used for |
+|---|---|
+| **Camera** (default — no cue needed) | Connective narration, no visual |
+| **Screen** | Live captures: IDE, sim, terminal, browser, DS — camera bubble on; annotations (arrows, tints, boxes) added as Descript layers |
+| **Media** | Generated stills, exported motion graphics/composites — full-bleed for impact beats |
+| **List** | Rule-4 text cards (gotchas, checklists, the L05 sign table) — type the exact words natively; garble-proof by construction |
+| **Quote** | Mental-model one-liners, held on screen |
+| **Big Fact** | Single-number punch beats ("15 LINES") |
+
+Scripts specify layout per beat; scene boundaries and timing stay
+edit-day decisions. When a new lesson's script is drafted or an asset
+pass back-edits one, `[Layout:]` lines are part of the deliverable.
 
 ### Asset pass SOP (steps 2–3 aren't done until all of this is)
 

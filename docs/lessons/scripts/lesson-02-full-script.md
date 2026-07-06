@@ -7,7 +7,8 @@ checklist; keep it open in a browser tab while filming.
 
 **Production key:** `[Visual:]`+`[Prompt:]` = generated still ·
 `[Video Prompt:]` = generated motion (0 used) · `[Screen:]` = you record it
-· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic).
+· `[Edit:]` = you build it in the editor (slide, overlay, or motion graphic)
+· `[Layout:]` = Descript scene layout (default pack names) — no cue = **Camera**.
 
 **Filming note:** the setup section (3:00–9:00) is best captured as ONE real
 install on a machine (or fresh user account) that has never had Android
@@ -33,6 +34,7 @@ Lesson 01. A computer — Windows, Mac, or Linux, 8GB+ RAM.
 
 ## Hook (0:00–0:40)
 
+[Layout: Media — full-bleed still]
 [Visual: A calendar with "HUB ARRIVES" circled three weeks away; a student
 coding happily today; a progress bar labeled "software" filling while the
 calendar pages flip.]
@@ -57,6 +59,7 @@ because everything after this, we write code.
 
 ## The Stack: Editor, Kit, Builder (0:40–2:00)
 
+[Layout: Media]
 [Visual: Three stacked layers — Android Studio logo → TeamCode folder →
 Gradle gear — arrow down to an APK landing on a Control Hub]
 [Prompt: Vertical three-layer stack diagram dark background, IDE window icon
@@ -97,6 +100,7 @@ ENTIRE season lives in one folder called TeamCode. Knowing what you're
 allowed to ignore — that's the actual skill, and it's ninety-five percent
 of this repo.
 
+[Layout: Screen — dim/glow as Descript layers]
 [Visual: Repo tree with everything grayed out except TeamCode glowing]
 [Screen: the real project tree in Android Studio's panel, TeamCode
 folder visible among the rest]
@@ -152,6 +156,7 @@ SUCCESSFUL line — zoom in on it]
 line means: your laptop just compiled the same competition code that runs
 on real FTC robots. No robot involved. That's the whole unlock.
 
+[Layout: Screen — the payoff moment, full-bleed]
 [Visual: Terminal with BUILD SUCCESSFUL in green, timer showing real
 elapsed time]
 [Screen: the REAL first build — terminal running to green BUILD

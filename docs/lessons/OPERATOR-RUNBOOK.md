@@ -75,7 +75,7 @@ execution order; the human-only steps are the schedule's critical path.
 | 4 | **Screen recordings** — IDE typing, sim driving, terminal runs, telemetry panels | **[YOU]** | The code is already on the lesson's branch — check it out, follow the script's Implementation beats. Record MORE than you need; b-roll of the sim driving is reusable across lessons. ~1–2 hrs |
 | 5 | **Voiceover / on-camera** — record the (Audio) track | **[YOU]** | Nobody else has your voice. Batch-record 2–3 lessons per session once warmed up. ~30–60 min per lesson |
 | 6 | **Edit** — assemble VO + screen captures + generated visuals per the script's timeline | **[YOU]** (or an editor you brief with the script) | The script's `[Visual:]` cues + timestamps ARE the edit decision list. ~2–4 hrs; the biggest time sink |
-| 7 | **Thumbnail** — generate from the packet's thumbnail prompt, pick/tweak | [AGENT] generates, **[YOU] pick** | ~15 min human |
+| 7 | **Thumbnail** — generate from the full script's thumbnail prompt (the packet's copy is the superseded draft), pick/tweak | [AGENT] generates, **[YOU] pick** | ~15 min human |
 | 8 | **Metadata** — title, description, tags, chapters | [AGENT] final-checks against the edit (chapter timestamps shift!), **[YOU] paste** | Packet has it all drafted; only the chapter times need syncing to the real cut |
 | 9 | **Upload + publish** — schedule on YouTube, add to playlist | **[YOU]** | Account access = you. Schedule, don't insta-publish; it enables step 10 prep |
 | 10 | **Pinned comment** — post the packet's pinned-comment text | **[YOU]** | Do it within minutes of publish; it's the whole repo-link mechanism |

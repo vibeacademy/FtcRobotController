@@ -31,6 +31,13 @@
 
 ## Starter Script
 
+> **Superseded for visuals.** The full shooting script
+> (`docs/lessons/scripts/lesson-04-full-script.md`) is the single source
+> of truth for every visual decision — prompts, `[Screen:]`/`[Edit:]`
+> reclassifications, `[Layout:]` cues, and `[Asset:]` paths. The cues
+> below are the original draft, kept for lineage; do not generate or
+> film from them.
+
 ### Prerequisites
 Lessons 01–03. ~30 min.
 
@@ -149,6 +156,9 @@ https://github.com/vibeacademy/FtcRobotController/tree/lesson-04-simulator
 tank drive, FTC practice, FIRST Tech Challenge simulator, mecanum simulator`
 
 ### Thumbnail concept
+
+> Current prompt lives in the full shooting script; the one below is the
+> original draft.
 Gamepad in the foreground wired (glowing cable) into a laptop showing the
 top-down sim field; text "NO ROBOT. STILL DRIVING."
 [Prompt: YouTube thumbnail 1280x720, game controller foreground with glowing

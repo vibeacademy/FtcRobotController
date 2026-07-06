@@ -21,6 +21,13 @@
 
 ## Starter Script
 
+> **Superseded for visuals.** The full shooting script
+> (`docs/lessons/scripts/lesson-03-full-script.md`) is the single source
+> of truth for every visual decision — prompts, `[Screen:]`/`[Edit:]`
+> reclassifications, `[Layout:]` cues, and `[Asset:]` paths. The cues
+> below are the original draft, kept for lineage; do not generate or
+> film from them.
+
 ### Prerequisites
 Lessons 01–02.
 
@@ -143,6 +150,9 @@ https://github.com/vibeacademy/FtcRobotController/tree/lesson-03-first-opmode
 FTC java tutorial, FIRST Tech Challenge coding, robot programming beginner`
 
 ### Thumbnail concept
+
+> Current prompt lives in the full shooting script; the one below is the
+> original draft.
 A hand on a game controller in the foreground, telemetry numbers reacting on
 a laptop behind; text "YOUR FIRST ROBOT PROGRAM."
 [Prompt: YouTube thumbnail 1280x720, foreground hands on game controller with
